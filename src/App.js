@@ -2,16 +2,16 @@ import { Routes, Route } from 'react-router-dom';
 import Home from "./views/Home"
 import Internship from './views/Internship';
 import Course from './views/Course';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
+import lightBlue from "@mui/material/colors/lightBlue";
 
 import './App.css';
 import './views/assets/css/fonts.css'
-
+import  light from '@mui/material/styles/createPalette';
 
 const theme = createTheme({
   palette: {
-    
+    mode: 'light',
     
     primary: {
       main: '#3f6fb5',
@@ -23,7 +23,7 @@ const theme = createTheme({
       main: '#d83e3e',
     },
     preLoader: {
-      
+      main:lightBlue[50]
     }
   },
   typography: {
