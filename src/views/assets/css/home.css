@@ -1,0 +1,102 @@
+.site-layout-content {
+    min-height: 280px;
+    padding: 24px;
+}
+
+ .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+}
+.hero{
+    background-image: url('../images/bg4.jpg');
+    
+    background-size: cover;
+    background-position: center center;
+    background-color: #000000 !important;
+}
+.hero-grad{
+    display:flex;
+    height:90vh;
+    justify-content: center;
+    align-items: center;
+   
+    background: linear-gradient(to bottom, #3f6eb500, #ffffff);
+}
+
+#abou{
+    background-image: url('../images/6316.jpg');
+    background-size: cover;
+    background-position-y: -300px;
+}
+/* #about-bg{
+    background-image: linear-gradient(#3f6eb5 ,rgba(255, 255, 255, 0.815));
+} */
+.stack{
+    background-image: url("../images/stack.jpg");
+        background-size: contain;
+}
+.dataScience{
+    background-image: url("../images/dataScience.jpg");
+    background-size:contain;
+}
+
+.ai {
+    background-image: url("../images/ai.jpg");
+    background-size: contain;
+}
+.devops {
+    background-image: url("../images/devops.jpg");
+    background-size: contain;
+}
+.digital {
+    background-image: url("../images/digital.jpg");
+    background-size: contain;
+}
+.graphic {
+    background-image: url("../images/graphic.jpg");
+    background-size: contain;
+}
+.delay-2{
+    animation-delay: 2s;
+}
+
+.delay-1{
+    animation-delay: 1s;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+.delay-200 {
+    animation-delay: 200ms;
+}
+.delay-300 {
+    animation-delay: 300ms;
+}
+.delay-400 {
+    animation-delay: 400ms;
+}
+.delay-500 {
+    animation-delay: 500ms;
+}
+.delay-600 {
+    animation-delay: 600ms;
+}
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
+.delay-900 {
+    animation-delay: 900ms;
+}
