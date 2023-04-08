@@ -30,12 +30,12 @@
    
     background: linear-gradient(to bottom, #3f6eb500, #ffffff);
 }
-
-#abou{
+/* 
+#about{
     background-image: url('../images/6316.jpg');
     background-size: cover;
     background-position-y: -300px;
-}
+} */
 /* #about-bg{
     background-image: linear-gradient(#3f6eb5 ,rgba(255, 255, 255, 0.815));
 } */
@@ -99,4 +99,34 @@
 }
 .delay-900 {
     animation-delay: 900ms;
+}
+
+.webdevelopment-service {
+    background-image: url('../images/services/webdevelopment.jpg');
+    background-size: contain;
+}
+
+.ecommerce-service{
+    background-size: contain;
+    background-image: url('../images/services/ecommerce.png');
+}
+
+.branding-service {
+    background-size: contain;
+    background-image: url('../images/services/branding.jpg');
+}
+
+.graphicdesign-service {
+    background-size: contain;
+    background-image: url('../images/services/graphicdesign.jpg');
+}
+
+.seo-service {
+    background-size: contain;
+    background-image: url('../images/services/seo.jpg');
+}
+
+.digital-service {
+    background-size: contain;
+    background-image: url('../images/services/digitalmarketing.jpg');
 }

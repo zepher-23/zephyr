@@ -23,7 +23,7 @@ const [expanded, setExpanded] = useState(false);
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography variant="h6" sx={{fontWeight:'400', color:'text.secondary'}}>What is Fullstack Development?</Typography>
+          <Typography variant="body1" sx={{fontWeight:'400', color:'text.secondary'}}>What is Fullstack Development?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -40,29 +40,62 @@ const [expanded, setExpanded] = useState(false);
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography variant="h6" sx={{fontWeight:'400', color:'text.secondary'}}>What is DevOps?</Typography>
+          <Typography variant="body1" sx={{fontWeight:'400', color:'text.secondary'}}>How to build skills for my career as a Software Developer?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-              DevOps is a set of practices that combines software development and IT operations to improve collaboration,
-              communication, and automation throughout the software development lifecycle. The goal of DevOps is to increase
-              the speed and efficiency of software development,
-              while also improving the quality and reliability of software releases.
+              To build skills as a software developer, you should practice coding regularly, stay up to date with the latest trends and
+              technologies, collaborate with other developers, develop problem-solving and communication skills,
+              focus on writing quality code, and practice good time management.
           </Typography>
         </AccordionDetails>
-      </Accordion>
-      <Accordion variant="outlined" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
+        </Accordion>
+         <Accordion variant="outlined" expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography variant="h6" sx={{fontWeight:'400', color:'text.secondary'}}>Not Disabled</Typography>
+          <Typography variant="body1" sx={{fontWeight:'400', color:'text.secondary'}}>What  programming language should I learn?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+              Choosing a programming language depends on your goals, interests, and the type of projects you want to work on.
+              Consider job trends, your background, and explore online communities. Try out different languages before committing to one.
+              Ultimately, choose a language that meets your individual needs and interests.
+          </Typography>
+        </AccordionDetails>
+        </Accordion>
+         <Accordion variant="outlined" expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel4a-content"
+          id="panel4a-header"
+        >
+          <Typography variant="body1" sx={{fontWeight:'400', color:'text.secondary'}}>What will I learn with an Internship at Zephyr?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+              Working for a software development company involves learning programming languages, software development methodologies,
+              version control, testing, deployment, project management, communication, collaboration, and soft skills.
+              As you gain more experience, you may specialize in specific areas such as front-end or back-end development.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion variant="outlined" expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel5a-content"
+          id="panel5a-header"
+        >
+          <Typography variant="body1" sx={{fontWeight:'400', color:'text.secondary'}}>What can Zephyr provide me more than the college?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          <Typography >
+              A software company can provide practical, real-world experience in software development,
+              teach best practices, teamwork, industry knowledge, problem-solving skills,
+              and specialized knowledge. While colleges provide a solid foundation, a software
+              company can offer more relevant knowledge for the industry.
           </Typography>
         </AccordionDetails>
       </Accordion>

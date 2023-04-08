@@ -19,13 +19,40 @@ import CardContent from "@mui/material/CardContent";
 import "./assets/images/bg5.jpg"
 import Faq from "./Components/Faq"
 
+const CardHover = ({children}) => {
+  const [isHovered, setIsHovered] = useState(false);
 
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <Card onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'none'}
+      elevation={isHovered ? 1 : 0} sx={{ width: '20vw',p:0 }}>
+             
+{children}
+          </Card>
+
+  )
+}
   
   
 const Home = () => {
   
     const [loading, setLoading] = useState(true);
+const [isHovered, setIsHovered] = useState(false);
 
+  const handleMouseOver = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
   useEffect(() => {
      const timer = setTimeout(() => {
       setLoading(false);
@@ -33,6 +60,11 @@ const Home = () => {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleServiceElevation = (event) => {
+    
+    
+  }
 
  
   return (
@@ -96,28 +128,65 @@ const Home = () => {
       
       <Container id="Services" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:5 }}>
         <Divider sx={{ p: 1, m: 1, width: '100%' }} />
+        
         <Typography variant="h4" sx={{ color: 'text.secondary' }}>Services</Typography>
-        <Card variant="outlined" id='web' sx={{width:'100%', height:'30vh', p:2,m:3}}>
+        <Box sx={{width:'100%'}}>
+          <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3,mb:0 }}>
+            <CardHover >
+              
+              <CardMedia className="webdevelopment-service " sx={{ height: '30vh' }} />
+              
+              <CardContent>
+                <Typography variant="h6" color="text.secondary">web development</Typography>
+              </CardContent>
 
-        </Card>
-        <Card variant="outlined" id='ecom' sx={{width:'100%', height:'30vh', p:2,m:3}}>
+          </CardHover>
+           <CardHover>
+<CardMedia className="ecommerce-service" sx={{ height: '30vh' }} />
+              
+              <CardContent>
+                <Typography variant="h6" color="text.secondary">E-Commerce</Typography>
+              </CardContent>
+          </CardHover>
+           <CardHover>
+<CardMedia className="branding-service" sx={{ height: '30vh' }} />
+              
+              <CardContent>
+                <Typography variant="h6" color="text.secondary">Branding</Typography>
+              </CardContent>
+          </CardHover>
 
-        </Card>
-        <Card variant="outlined" id='app' sx={{width:'100%', height:'30vh', p:2,m:3}}>
+        </Container>
+        </Box>
+        <Box sx={{width:'100%'}}>
+           <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3, mt:0 }}>
+          <CardHover>
+            <CardMedia className="graphicdesign-service" sx={{ height: '30vh' }} />
+              
+              <CardContent sx={{ p: 2 }}>
+                <Typography variant="h6" color="text.secondary" >Graphic Design</Typography>
+              </CardContent>
 
-        </Card>
-        <Card variant="outlined" id='branding' sx={{width:'100%', height:'30vh', p:2,m:3}}>
+          </CardHover>
+           <CardHover>
+            <CardMedia className="seo-service" sx={{ height: '30vh' }} />
+              
+              <CardContent>
+                <Typography variant="h6" color="text.secondary">SEO</Typography>
+              </CardContent>
 
-        </Card>
-        <Card variant="outlined" id='dig' sx={{width:'100%', height:'30vh', p:2,m:3}}>
+          </CardHover>
+           <CardHover>
+            <CardMedia className="digital-service"  sx={{ height: '30vh' }} />
+              
+              <CardContent>
+                <Typography variant="h6" color="text.secondary" >Digital Marketing</Typography>
+              </CardContent>
 
-        </Card>
-        <Card variant="outlined" id='graphic' sx={{width:'100%', height:'30vh', p:2,m:3}}>
+          </CardHover>
 
-        </Card>
-        <Card variant="outlined" id='seo' sx={{width:'100%', height:'30vh', p:2,m:3}}>
-
-        </Card>
+        </Container>
+        </Box>
 
       </Container>
       <Container id="Internships" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:5 }}>
@@ -202,7 +271,7 @@ const Home = () => {
             />
            <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          DevOps
+         Java
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -222,7 +291,7 @@ const Home = () => {
             />
            <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Digital Marketing
+          Web Development
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -242,7 +311,7 @@ const Home = () => {
             />
            <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Graphic Design
+          Python
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Lizards are a widespread group of squamate reptiles, with over 6,000
