@@ -32,7 +32,7 @@ const CardHover = ({children}) => {
 
   return (
     <Card onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'none'}
-      elevation={isHovered ? 1 : 0} sx={{ width: '20vw',p:0 }}>
+      elevation={isHovered ? 2 : 0} sx={{ width: '20vw',p:0 }}>
              
 {children}
           </Card>
@@ -134,7 +134,7 @@ const [isHovered, setIsHovered] = useState(false);
           <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3,mb:0 }}>
             <CardHover >
               
-              <CardMedia className="webdevelopment-service " sx={{ height: '30vh' }} />
+              <CardMedia className="webdevelopment-service " sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent>
                 <Typography variant="h6" color="text.secondary">web development</Typography>
@@ -142,14 +142,14 @@ const [isHovered, setIsHovered] = useState(false);
 
           </CardHover>
            <CardHover>
-<CardMedia className="ecommerce-service" sx={{ height: '30vh' }} />
+<CardMedia className="ecommerce-service" sx={{ height:'30vh', backgroundSize:'contain' }} />
               
               <CardContent>
                 <Typography variant="h6" color="text.secondary">E-Commerce</Typography>
               </CardContent>
           </CardHover>
            <CardHover>
-<CardMedia className="branding-service" sx={{ height: '30vh' }} />
+<CardMedia className="branding-service" sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent>
                 <Typography variant="h6" color="text.secondary">Branding</Typography>
@@ -161,7 +161,7 @@ const [isHovered, setIsHovered] = useState(false);
         <Box sx={{width:'100%'}}>
            <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3, mt:0 }}>
           <CardHover>
-            <CardMedia className="graphicdesign-service" sx={{ height: '30vh' }} />
+            <CardMedia className="graphicdesign-service" sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent sx={{ p: 2 }}>
                 <Typography variant="h6" color="text.secondary" >Graphic Design</Typography>
@@ -169,7 +169,7 @@ const [isHovered, setIsHovered] = useState(false);
 
           </CardHover>
            <CardHover>
-            <CardMedia className="seo-service" sx={{ height: '30vh' }} />
+            <CardMedia className="seo-service" sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent>
                 <Typography variant="h6" color="text.secondary">SEO</Typography>
@@ -177,7 +177,7 @@ const [isHovered, setIsHovered] = useState(false);
 
           </CardHover>
            <CardHover>
-            <CardMedia className="digital-service"  sx={{ height: '30vh' }} />
+            <CardMedia className="digital-service"  sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent>
                 <Typography variant="h6" color="text.secondary" >Digital Marketing</Typography>
@@ -198,7 +198,7 @@ const [isHovered, setIsHovered] = useState(false);
           
 
               <CardMedia className="stack"
-              sx={{ height: "25vh" }}
+              sx={{ height: "25vh", backgroundSize:'contain'  }}
               
             />
            <CardContent>
@@ -218,7 +218,7 @@ const [isHovered, setIsHovered] = useState(false);
           </Card>
           <Card variant="elevation" elevation="2" sx={{m:3,width:'100%'}}>
  <CardMedia className="dataScience"
-              sx={{ height: "25vh" }}
+              sx={{ height: "25vh", backgroundSize:'contain'  }}
               
             />
            <CardContent>
@@ -238,7 +238,7 @@ const [isHovered, setIsHovered] = useState(false);
           </Card>
           <Card variant="elevation" elevation="2" sx={{m:3,width:'100%'}}>
  <CardMedia className="ai"
-              sx={{ height: "25vh" }}
+              sx={{ height: "25vh", backgroundSize:'contain'  }}
               
             />
            <CardContent>
@@ -266,7 +266,7 @@ const [isHovered, setIsHovered] = useState(false);
           
 
               <CardMedia className="devops"
-              sx={{ height: "25vh" }}
+              sx={{ height: "25vh", backgroundSize:'contain'  }}
               
             />
            <CardContent>
@@ -286,7 +286,7 @@ const [isHovered, setIsHovered] = useState(false);
           </Card>
           <Card variant="elevation" elevation="2" sx={{m:3,width:'100%'}}>
  <CardMedia className="digital"
-              sx={{ height: "25vh" }}
+              sx={{ height: "25vh", backgroundSize:'contain'  }}
               
             />
            <CardContent>
@@ -306,7 +306,7 @@ const [isHovered, setIsHovered] = useState(false);
           </Card>
           <Card variant="elevation" elevation="2" sx={{m:3,width:'100%'}}>
  <CardMedia className="graphic"
-              sx={{ height: "25vh" }}
+              sx={{ height: "25vh", backgroundSize:'contain'  }}
               
             />
            <CardContent>
