@@ -12,12 +12,15 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider"
 import Link from "@mui/material/Link"
 import cssanimation from "./assets/css/cssanimation.css"
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea, CardActions, styled } from '@mui/material';
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import "./assets/images/bg5.jpg"
 import Faq from "./Components/Faq"
+import Tabs from "@mui/material/Tabs"
+import Tab from "@mui/material/Tab"
+
 
 const CardHover = ({children}) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -39,19 +42,65 @@ const CardHover = ({children}) => {
 
   )
 }
+const CustomTabs = styled((props) => (
+  <Tabs {...props}
+    TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" />
+    }} />))
+  ({
+  '& .MuiTabs-indicator': {
+    display: 'flex',
+      justifyContent: 'center',
+    alignItems:'center',
+      backgroundColor: 'primary.main',
+      boxShadow: '0 4px 12px 0 rgba(0,0,0,0.5)',
+      height: '40px',
+    // borderTopLeftRadius:'5px',
+    // borderTopRightRadius:'5px',
+      borderRadius: '10px',
+      
+      marginBottom: '3.5px',
+   
+  },
+  '& .MuiTabs-indicatorSpan': {
+    maxWidth: 60,
+    width: '100%',
+    height:'0',
+    
+
+    backgroundColor: '#fff',
+  },
+
+})
   
-  
+const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
+  ({ theme }) => ({
+    textTransform: 'none',
+    fontWeight: 300,
+    fontSize: theme.typography.pxToRem(15),
+    marginRight: theme.spacing(1),
+    marginLeft: theme.spacing(1),
+    color: '#FFFFFF99',
+    zIndex:'1000',
+    '&.Mui-selected': {
+      
+      color: '#ffffff88',
+    },
+    '&.Mui-focusVisible': {
+      backgroundColor: 'rgba(100, 95, 228, 0.32)',
+    },
+  }),
+);
+
+
+
+
 const Home = () => {
   
     const [loading, setLoading] = useState(true);
-const [isHovered, setIsHovered] = useState(false);
+ const [value, setValue] = useState(0);
 
-  const handleMouseOver = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovered(false);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
   };
   useEffect(() => {
      const timer = setTimeout(() => {
@@ -61,10 +110,6 @@ const [isHovered, setIsHovered] = useState(false);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleServiceElevation = (event) => {
-    
-    
-  }
 
  
   return (
@@ -97,7 +142,7 @@ const [isHovered, setIsHovered] = useState(false);
             create something extraordinary together! <Typography variant="subtitle1" component="span" ><Link underline="none" sx={{"&:hover":{cursor:"pointer"},color:"primary.light",fontStyle:"italic",fontWeight:"600"}}> Contact us</Link></Typography> now.
         </Typography></Box>
       </Container></Box>
-      <Container id="partners" maxWidth="lg" sx={{display:"flex",flexDirection:"column",alignItems:'center', height:'60vh',mt:15}}>
+      {/* <Container id="partners" maxWidth="lg" sx={{display:"flex",flexDirection:"column",alignItems:'center', height:'60vh',mt:15}}>
         <Typography variant="h4" sx={{ color: "text.secondary" }}>Our Previous Partners</Typography>
         <Container sx={{mt:1,height:"20vh",bgcolor:"primary.light"}}>
           <Box></Box>
@@ -124,20 +169,22 @@ const [isHovered, setIsHovered] = useState(false);
 
         </Container>
 
-      </Container>
+      </Container> */}
       
       <Container id="Services" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:5 }}>
-        <Divider sx={{ p: 1, m: 1, width: '100%' }} />
-        
         <Typography variant="h4" sx={{ color: 'text.secondary' }}>Services</Typography>
-        <Box sx={{width:'100%'}}>
+        
+        <Box sx={{ width: '100%' }}>
+          
+          {/* <Divider  sx={{ p: 1, m: 1, width: '100%' }} />         */}
           <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3,mb:0 }}>
+            
             <CardHover >
               
               <CardMedia className="webdevelopment-service " sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent>
-                <Typography variant="h6" color="text.secondary">web development</Typography>
+                <Typography variant="h6" color="text.secondary">Web/Software Development</Typography>
               </CardContent>
 
           </CardHover>
@@ -189,7 +236,56 @@ const [isHovered, setIsHovered] = useState(false);
         </Box>
 
       </Container>
-      <Container id="Internships" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:5 }}>
+      {/* ....................COURSES.................. */}
+      
+      <Box className="coursesBanner" sx={{width:'100%'}}>
+        <Container sx={{ p: 10, width:'60VW',m:0,ml:4,mt:5 }}>
+          
+           <Typography variant="h5" sx={{mb:3,color:'text.secondary', fontWeight:'300'}}> "Launch Your Software Career Today - Learn the Fundamentals with Our Programming Courses!"</Typography>
+<Typography variant="body1" fontWeight='200'>
+            Our programming courses are designed to provide you with
+            the essential
+            skills and knowledge to kick-start your software career. With our expert instructors,
+            you'll learn the fundamentals of programming, develop problem-solving skills, and build a strong
+            foundation in programming that can help you excel in any programming language. Plus, completing programming projects
+            during the course will enable you to build a portfolio that showcases your skills and sets you apart from other candidates.
+            Don't miss out on this opportunity to unlock endless career opportunities in the software industry.
+            Enroll now and take the first step towards a bright future in programming.
+          </Typography>
+          <Typography variant="h6" sx={{color:'text.secondary',mt:2, fontWeight:'300'}}>
+            Explore Our Courses - Select Your Ideal Programming Language, Career Track, Framework, and Duration to Customize Your Learning Journey!
+          </Typography>
+</Container>
+      </Box>
+      <Box sx={{
+        width: '100%', backgroundColor: 'primary.main', py: 1, display: 'flex', flexDirection: 'row',
+      justifyContent:'center'}}>
+ 
+        <Box sx={{px:2,backgroundColor:'primary.dark',borderRadius:'10px'}}>
+        <CustomTabs
+          value={value}
+          onChange={handleChange}
+            aria-label="styled tabs example"
+            
+          centered
+        >
+          <CustomTab label="Language" />
+          <CustomTab label="Career Track" />
+            <CustomTab label="Frontend" />
+            <CustomTab label="Backend" />
+            <CustomTab label="Projects" />
+        </CustomTabs>
+        </Box>
+        
+      </Box>
+      <Box sx={{ width: '100%', height: '60vh' }}>
+        <Container sx={{backgroundColor:'primary.dark',height:'10vh'}}></Container>
+        <Container sx={{backgroundColor:'primary.main',height:'10vh'}}></Container>
+        <Container sx={{backgroundColor:'primary.light',height:'10vh'}}></Container>
+
+        </Box>
+
+      <Container id="Internships" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:10 }}>
 <Typography variant="h4" sx={{ color: 'text.secondary' }}>Internship Training</Typography>
         
         <Container sx={{display:'flex',flexDirection:'row', justifyContent:'space-between',m:2,p:2,pb:0,width:'100%'}}>

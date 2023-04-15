@@ -130,3 +130,12 @@
     background-size: contain;
     background-image: url('../images/services/digitalmarketing.jpg');
 }
+
+/* ..........COURSES............ */
+
+.coursesBanner{
+   
+    background-image: url('../images/courseBanner.jpg');
+    background-size: cover;
+    background-position-y: -50px;
+}
