@@ -8,7 +8,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -22,7 +22,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -35,7 +35,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -48,7 +48,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -61,7 +61,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -74,7 +74,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -87,7 +87,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -100,7 +100,7 @@
                 "3 Months"
             ],
             "Level": "Basic",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Mini Projects": "1",
             "Assigments": "2",
             "Certificate": "Yes"
@@ -112,7 +112,7 @@
             "Description": "",
             "Prerequisites":["HTML/CSS","JavaScript"],
             "Level":"Advanced",
-            "Duration":"4 Months",
+            "Duration":["4 Months"],
             "Assigments":"2",
             "Projects":"1",
             "Certificate":"Yes"
@@ -121,7 +121,7 @@
             "Description": "",
             "Prerequisites": ["Python"],
             "Level": "Advanced",
-            "Duration": "2 Months",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -130,7 +130,7 @@
             "Description": "",
             "Prerequisites": ["NodeJS"],
             "Level": "Advanced",
-            "Duration": "2 Months",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -138,9 +138,9 @@
         
         "Web Development": {
             "Description": "",
-            "Prerequisites": "None",
+            "Prerequisites": ["None"],
             "Level": "Basic",
-            "Duration": "2 Months",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -149,7 +149,7 @@
             "Description": "",
             "Prerequisites": ["Java"],
             "Level": "Basic",
-            "Duration": "4 Months",
+            "Duration": ["4 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -158,7 +158,7 @@
             "Description": "",
             "Prerequisites": ["Python"],
             "Level": "Advanced",
-            "Duration": "4 Months",
+            "Duration": ["4 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -169,14 +169,16 @@
             "Description": "",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Bootstrap": {
             "Description": "",
-            "Prerequisites": "HTML/CSS",
+            "Prerequisites": ["HTML/CSS"],
             "Level": "Intermediate",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -185,14 +187,16 @@
             "Description": "",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
         },
         "VueJS": {
             "Description": "",
-            "Language": ["HTML/CSS","JavaScript"],
+            "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -203,7 +207,7 @@
             "Description": "",
             "Prerequisites": ["JavaScript","HTML/CSS"],
             "Level": "Intermediate",
-            "Duration":"2 Months",
+            "Duration":["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -216,7 +220,7 @@
                 "JSON"
             ],
             "Level": "Intermediate",
-            "Duration": "2 Months",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -227,7 +231,7 @@
                 "Basic SQL"
             ],
             "Level": "Intermediate",
-            "Duration": "2 Months",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
@@ -239,19 +243,19 @@
                 "Python"
             ],
             "Level": "Intermediate",
-            "Duration": "2 Months",
+            "Duration": ["2 Months"],
             "Assigments": "2",
             "Projects": "1",
             "Certificate": "Yes"
         }
     },
-    "Live Project":{
+    "Live Projects":{
         
         "Chat Application":{
             "Description": "",
             "Language": ["JavaScript","HTML/CSS"],
             "Level": "Intermediate",
-            "Duration": "1 Month",
+            "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         },
@@ -259,7 +263,7 @@
             "Description": "",
             "Language": ["HTML/CSS","JavaScript","JSON"],
             "Level": "Intermediate",
-           "Duration": "1 Month",
+           "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         },
@@ -267,15 +271,15 @@
             "Description": "",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
-            "Duration": "1 Month",
+            "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         },
-        "Social media":{
+        "Social Media":{
             "Description": "",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
-            "Duration": "1 Month",
+            "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         },
@@ -283,7 +287,7 @@
             "Description": "",
             "Language": ["HTML/CSS","JavaScript","JSON"],
             "Level": "Intermediate",
-            "Duration": "1 Month",
+            "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         },
@@ -291,7 +295,7 @@
             "Description": "",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
-            "Duration": "1 Month",
+            "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         },
@@ -299,7 +303,7 @@
             "Description": "",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate", 
-            "Duration": "1 Month",
+            "Duration": ["1 Month"],
             "Projects": "1",
             "Certificate": "Yes"
         }

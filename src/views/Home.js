@@ -8,6 +8,7 @@ import Hero from './Components/Hero'
 import Box from '@mui/material/Box'
 import Preloader from './Components/Preloader';
 import Container from "@mui/material/Container";
+import Chip from '@mui/material/Chip';
 import Footer from "./Components/Footer";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider"
@@ -23,7 +24,10 @@ import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import "./assets/css/course.css"
 import jsonData from '../views/assets/courseData.json'
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 const json = jsonData
+ 
+
 const CardHover = ({ children }) => {
   
   const [isHovered, setIsHovered] = useState(false);
@@ -37,7 +41,7 @@ const CardHover = ({ children }) => {
   };
 
   return (
-    <Card  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'none'}
+    <Card  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} 
       elevation={isHovered ? 2 : 0} sx={{ width: '20vw',p:0 }}>
              
 {children}
@@ -45,35 +49,47 @@ const CardHover = ({ children }) => {
 
   )
 }
+ var C = ""
 
+const CourseCard = ({ children, image,setImageClass, hoveredImage,id,setCourse }) => {
+  
 
-const CourseCard = ({ children, image, hoveredImage,id }) => {
-  
-  
 const [isHovered, setIsHovered] = useState(false);
-  const [course, setCourse] = useState(null)
+   
+  
+  
+  
+
+ 
+
   const handleCourseOver = () => {
     
     setIsHovered(true);
   };
-
   const handleMouseOut = () => {
     setIsHovered(false);
   };
+  const handleCourseClick = () => {
+
+    setCourse(id)
+    setImageClass(hoveredImage)
+    
+    
   
+}
 
   return (
-    <Card id={image} onMouseOver={handleCourseOver}  onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'elevation'}
-         elevation={isHovered ? 12 : 1}
+    <Card  onMouseOver={handleCourseOver} onClick={handleCourseClick} onMouseOut={handleMouseOut} 
+         elevation={isHovered ? 12 : 2}
  sx={{
          p: 0, backgroundColor:isHovered ? '#f5f5f5':'white', m: 1,
-      '&:hover':{cursor:'pointer'},display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRadius:'10px', borderWidth:'0px',borderStyle:'solid', borderColor:'primary.light',width:'12vw',maxWidth:'12vw'}}>
+      '&:hover':{cursor:'pointer'},display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRadius:'10px', borderWidth:'0px',borderStyle:'solid', borderColor:'primary.light'}}>
            
 
-<Box className={`${isHovered ? hoveredImage : image}`} sx={{minWidth:'4rem',height:'4rem',m:1,mt:2,mb:0,backgroundRepeat:'no-repeat',transform:isHovered ? 'translateY(0)' :'translateY(2.5vh)' ,transition:'0.2s ease-in-out'}}>
+<Box className={`${isHovered ? hoveredImage : image}`} sx={{minWidth:'4rem',height:'4rem',m:3,mt:2,mb:0,backgroundRepeat:'no-repeat' ,transition:'0.2s ease-in-out'}}>
       </Box>
-      <Box sx={{ width: '100%', m: 0, p: 1, mt:2,backgroundColor:'primary.light',transform:isHovered ? 'translateY(0)' :'translateY(10vh)' ,transition:'0.2s ease-in-out'}}>{children}</Box> 
-          </Card>
+      <Box sx={{ width: '100%', m: 0,mx:2, p: 1, mt:2,backgroundColor:isHovered?'primary.main':'primary.light' ,transition:'0.2s ease-in-out'}}>{children}</Box> 
+        </Card>
   )
 
 
@@ -84,7 +100,7 @@ const [isHovered, setIsHovered] = useState(false);
 const CustomTypo = styled(Typography)(({theme})=>({
   
   fontWeight: 300,
-  fontSize:'0.9vw',
+  fontSize:'1vw',
   display: 'flex',
   color:'white',
   flexGrow:2,
@@ -152,30 +168,29 @@ const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
 
 
 const Home = () => {
-  const [course, setCourse] = useState("Python")
-
-  
-  
-  
+  const [course, setCourse] = useState('Python')
     const [loading, setLoading] = useState(true);
   const [value, setValue] = useState(0);
   const [view, setView] = useState("Language")
+  const [imageClass, setImageClass] = useState ('python')
+
+  console.log(course)
+const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
+  const initialClass = ['python',"fullstack","react","nodejs","chat"]
+  const category = json[view]
+  const courseInfo = category[course]
+ 
+
+
+  console.log(imageClass)
 
   
-  
-
-
-  const handleCourseClick = (event) => {
-    setCourse(event.target.textContent)
-  
-}
-
-
   const handleChange = (event, newValue) => {
    
-    setValue(newValue);
+    setImageClass(initialClass[newValue]);
     setView(event.target.textContent)
-    
+    setValue(newValue)
+    setCourse(initialCourse[newValue])
   };
 
 
@@ -355,94 +370,127 @@ const Home = () => {
         </Box>
         
       </Box>
-      <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',p:2,backgroundColor:'white' }}>
+      <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',p:1,backgroundColor:'white' }}>
         <Container disableGutters sx={{ m: 1 }}>
          
           
 
           
-          <Container id="Language" onClick={handleCourseClick} sx={{display:view === 'Language' ? 'flex': 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2,transition:'0.5s ease-in-out'}}>
+          <Container  id="Language" sx={{display:view === 'Language' ? 'flex': 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2,transition:'0.5s ease-in-out'}}>
             {/* <Box sx={{display:'flex' ,flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="python" image="python-flat" hoveredImage="python" sx={{}}>
+              <CourseCard setImageClass={setImageClass} id="Python" setCourse={setCourse}   image="python-flat" hoveredImage="python" sx={{}}>
                 
                 <CustomTypo variant="h6" sx={{}}>Python </CustomTypo>
                 
               </CourseCard>
-              <CourseCard id="c" image="c-flat" hoveredImage="c" sx={{}}><CustomTypo   variant="h6" >C</CustomTypo></CourseCard>
-              <CourseCard id="cplus" image="cplus-flat" hoveredImage="cplus" sx={{}}><CustomTypo   variant="h6" >C++</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="C" image="c-flat" hoveredImage="c" sx={{}}><CustomTypo   variant="h6" >C</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="C++" image="cplus-flat" hoveredImage="cplus" sx={{}}><CustomTypo   variant="h6" >C++</CustomTypo></CourseCard>
             {/* </Box> */}
             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="java" image="java-flat" hoveredImage="java" sx={{}}><CustomTypo   variant="h6" >Java</CustomTypo></CourseCard>
-              <CourseCard id="sql" image="sql-flat" hoveredImage="sql" sx={{}}><CustomTypo   variant="h6" >SQL</CustomTypo></CourseCard>
-              <CourseCard id="javascript" image="javascript-flat" hoveredImage="javascript" sx={{}}><CustomTypo   variant="h6" >JavaScript</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Java" image="java-flat" hoveredImage="java" sx={{}}><CustomTypo   variant="h6" >Java</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="SQL" image="sql-flat" hoveredImage="sql" sx={{}}><CustomTypo   variant="h6" >SQL</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="JavaScript" image="javascript-flat" hoveredImage="javascript" sx={{}}><CustomTypo   variant="h6" >JavaScript</CustomTypo></CourseCard>
             {/* </Box> */}
             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"start"}}> */}
-              <CourseCard id="html" image="html-flat" hoveredImage="html" sx={{}}><CustomTypo   variant="h6" >HTML/CSS</CustomTypo></CourseCard>
-              <CourseCard id="php" image="php-flat" hoveredImage="php" sx={{}}><CustomTypo   variant="h6" >PHP</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="HTML/CSS" image="html-flat" hoveredImage="html" sx={{}}><CustomTypo   variant="h6" >HTML/CSS</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="PHP" image="php-flat" hoveredImage="php" sx={{}}><CustomTypo   variant="h6" >PHP</CustomTypo></CourseCard>
               
             {/* </Box> */}
       
         </Container>
           <Container id="Career Track" sx={{  display: view === 'Career Track' ? 'flex' : 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2, transition: '0.5s ease-in-out' }}>
              {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="fullstack" image="fullstack-flat" hoveredImage="fullstack" sx={{}}><CustomTypo   variant="h6" >Fullstack</CustomTypo></CourseCard>
-              <CourseCard id="datascience" image="datascience-flat" hoveredImage="datascience" sx={{}}><CustomTypo   variant="h6" >Data Science</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Fullstack" image="fullstack-flat" hoveredImage="fullstack" sx={{}}><CustomTypo   variant="h6" >Fullstack</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Data Science" image="datascience-flat" hoveredImage="datascience" sx={{}}><CustomTypo   variant="h6" >Data Science</CustomTypo></CourseCard>
             {/* </Box> */}
              {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="cloudcomputing" image="cloudcomputing-flat" hoveredImage="cloudcomputing" sx={{}}><CustomTypo   variant="h6" >Cloud Computing</CustomTypo></CourseCard>
-              <CourseCard id="web" image="web-flat" hoveredImage="web" sx={{ }}><CustomTypo   variant="h6" >Web Development</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Cloud Computing" image="cloudcomputing-flat" hoveredImage="cloudcomputing" sx={{}}><CustomTypo   variant="h6" >Cloud Computing</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Web Development" image="web-flat" hoveredImage="web" sx={{ }}><CustomTypo   variant="h6" >Web Development</CustomTypo></CourseCard>
             {/* </Box> */}
             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="android" image="android-flat" hoveredImage="android" sx={{}}><CustomTypo   variant="h6" >Android</CustomTypo></CourseCard>
-              <CourseCard id="ai" image="ai-flat" hoveredImage="ai" sx={{ }}><CustomTypo   variant="h6" >Ai/ML</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Android" image="android-flat" hoveredImage="android" sx={{}}><CustomTypo   variant="h6" >Android</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="AI/ML" image="ai-flat" hoveredImage="ai" sx={{ }}><CustomTypo   variant="h6" >Ai/ML</CustomTypo></CourseCard>
             {/* </Box> */}
         </Container>
           <Container id="Frontend" sx={{ display: view === 'Frontend' ? 'flex' : 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2, transition: '0.5s ease-in-out' }}>
             {/* <Box sx={{display:'flex',flexDirection:'row',justifyContent:"center"}}> */}
-              <CourseCard id="react" image="react-flat" hoveredImage="react" sx={{}}><CustomTypo   variant="h6" >React</CustomTypo></CourseCard>
-              <CourseCard id="bootstrap" image="bootstrap-flat" hoveredImage="bootstrap" sx={{}}><CustomTypo   variant="h6" >Bootstrap</CustomTypo></CourseCard>
-             <CourseCard id="angularjs" image="angularjs-flat" hoveredImage="angularjs" sx={{}}><CustomTypo   variant="h6" >AngularJS</CustomTypo></CourseCard>
-              <CourseCard id="vuejs" image="vuejs-flat" hoveredImage="vuejs" sx={{}}><CustomTypo   variant="h6" >VueJS</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="React" image="react-flat" hoveredImage="react" sx={{}}><CustomTypo   variant="h6" >React</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Bootstrap" image="bootstrap-flat" hoveredImage="bootstrap" sx={{}}><CustomTypo   variant="h6" >Bootstrap</CustomTypo></CourseCard>
+             <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="AngularJS" image="angularjs-flat" hoveredImage="angularjs" sx={{}}><CustomTypo   variant="h6" >AngularJS</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="VueJS" image="vuejs-flat" hoveredImage="vuejs" sx={{}}><CustomTypo   variant="h6" >VueJS</CustomTypo></CourseCard>
            
             {/* </Box> */}
 
         </Container>
-          <Container id="Backend" sx={{ display: view === 'Backend' ? 'flex' : 'none',flexWrap:'wrap', flexDirection: 'row', justifyContent: 'center', backgroundColor: 'white', p: 2, display: view === 'Backend' ? 'flex' : 'none', transition: '0.5s ease-in-out' }}>
+          <Container id="Backend" sx={{ display: view === 'Backend' ? 'flex' : 'none',flexWrap:'wrap', flexDirection: 'row', justifyContent: 'center', backgroundColor: 'white', p: 2, transition: '0.5s ease-in-out' }}>
             
              {/* <Box sx={{display:'flex',flexDirection:'row',justifyContent:"center"}}> */}
-              <CourseCard id="nodejs" image="nodejs-flat" hoveredImage="nodejs" sx={{}}><CustomTypo   variant="h6" >NodeJS</CustomTypo></CourseCard>
-              <CourseCard id="mongodb" image="mongodb-flat" hoveredImage="mongodb" sx={{}}><CustomTypo   variant="h6" >MongoDB</CustomTypo></CourseCard>
-             <CourseCard id="mysql" image="mysql-flat" hoveredImage="mysql" sx={{}}><CustomTypo   variant="h6" >MySQL</CustomTypo></CourseCard>
-              <CourseCard id="django" image="django-flat" hoveredImage="django" sx={{}}><CustomTypo   variant="h6" >Django</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="NodeJS" image="nodejs-flat" hoveredImage="nodejs" sx={{}}><CustomTypo   variant="h6" >NodeJS</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="MongoDB" image="mongodb-flat" hoveredImage="mongodb" sx={{}}><CustomTypo   variant="h6" >MongoDB</CustomTypo></CourseCard>
+             <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="MySQL" image="mysql-flat" hoveredImage="mysql" sx={{}}><CustomTypo   variant="h6" >MySQL</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Django" image="django-flat" hoveredImage="django" sx={{}}><CustomTypo   variant="h6" >Django</CustomTypo></CourseCard>
            
             {/* </Box> */}
         </Container>
           <Container id="Live Projects" sx={{ flexDirection: 'row', justifyContent: 'center', backgroundColor: 'white', p: 2,flexWrap:'wrap', display: view === 'Live Projects' ? 'flex' : 'none', transition: '0.5s ease-in-out' }}>
             {/* <Box sx={{display:'flex' ,flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="chat" image="chat-flat" hoveredImage="chat" sx={{}}>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Chat Application" image="chat-flat" hoveredImage="chat" sx={{}}>
                 
                 <CustomTypo  variant="h6" sx={{}}>Chat Application </CustomTypo>
                 
               </CourseCard>
-              <CourseCard id="movie" image="movie-flat" hoveredImage="movie" sx={{}}><CustomTypo   variant="h6" >Movie Database</CustomTypo></CourseCard>
-              <CourseCard id="music" image="music-flat" hoveredImage="music" sx={{}}><CustomTypo   variant="h6" >Music Player</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Movie Database" image="movie-flat" hoveredImage="movie" sx={{}}><CustomTypo   variant="h6" >Movie Database</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Music Player" image="music-flat" hoveredImage="music" sx={{}}><CustomTypo   variant="h6" >Music Player</CustomTypo></CourseCard>
             {/* </Box> */}
             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
-              <CourseCard id="social" image="social-flat" hoveredImage="social" sx={{}}><CustomTypo   variant="h6" >Social Media</CustomTypo></CourseCard>
-              <CourseCard id="ecommerce" image="ecommerce-flat" hoveredImage="ecommerce" sx={{}}><CustomTypo   variant="h6" >Ecommerce</CustomTypo></CourseCard>
-              <CourseCard id="auth" image="auth-flat" hoveredImage="auth" sx={{}}><CustomTypo   variant="h6" sx={{alignItems:'center'}} >Authentication System</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Social Media" image="social-flat" hoveredImage="social" sx={{}}><CustomTypo   variant="h6" >Social Media</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Ecommerce" image="ecommerce-flat" hoveredImage="ecommerce" sx={{}}><CustomTypo   variant="h6" >Ecommerce</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Authentication System" image="auth-flat" hoveredImage="auth" sx={{}}><CustomTypo   variant="h6" sx={{alignItems:'center'}} >Authentication System</CustomTypo></CourseCard>
             {/* </Box> */}
             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"start"}}> */}
-              <CourseCard id="payment" image="payment-flat" hoveredImage="payment" sx={{}}><CustomTypo   variant="h6" >Payment Gateway</CustomTypo></CourseCard>
+              <CourseCard setImageClass={setImageClass} setCourse={setCourse} id="Payment Gateway" image="payment-flat" hoveredImage="payment" sx={{}}><CustomTypo   variant="h6" >Payment Gateway</CustomTypo></CourseCard>
               
             {/* </Box> */}
         </Container>
         </Container>
         <Divider orientation="vertical" sx={{bgcolor:'',height:'60vh'}} />
-        <Container sx={{height:'50vh',width:'120vw',backgroundColor:'primary.light',m:2}}>
+        <Container sx={{width:'100vw',backgroundColor:'white',m:2}}>
+          <Container sx={{ p: 3 }}>
+            <Box sx={{ display: 'flex',justifyContent:'center', flexDirection: 'row' }}>
+              <Box className={imageClass} sx={{ backgroundRepeat: 'no-repeat', m:1,ml:0, width: '4rem', height: '4rem' }}></Box>
+ <Typography variant="h4" sx={{ color: 'text.secondary', flexGrow: '1' ,display:'flex',alignItems:'center'}}>{course}</Typography>
+            </Box>
+            <Typography variant="body1" >Our programming courses are designed to provide you with the essential
+              skills and knowledge to kick-start your software career. With our expert instructors, you'll learn
+              the fundamentals of programming, develop problem-solving skills, and build a strong foundation in programming
+              that can help you excel in any programming language.</Typography>
+          </Container>
+          <Card  elevation={4} sx={{p:1,mx:3,backgroundColor:'primary.main'}}>
+
+            {Object.keys(courseInfo).map((key, index) => (<>
+              <Container key={key} sx={{ display: 'flex', flexDirection: 'row',alignItems:'center', backgroundColor: index % 2 === 0 ? 'primary.main' : 'primary.light' }} >
+                {key === "Language" || key === "Prerequisites" || key === "Duration" ? (
+                  <>
+                      <Typography variant="subtitle2" sx={{m:1,color:'#f0f0f0',flexGrow:'1'}}>{key}: </Typography>
+                  {courseInfo[key].map((item, index) => (
+        <Chip sx={{bgcolor:'primary.dark',height:'25px',color:'#dedede',ml:1,transition:'0.5s ease-in-out'}} label={item} key={index} />
+))}
+ </>
+                ) : key === "Description" ? null : (<>
+                  <Typography variant="subtitle2" sx={{ m: 1, color: '#f0f0f0', flexGrow: '1' }}>{key}: </Typography>
+      <Typography variant="subtitle2" sx={{m:1,fontWeight:'300',color:'#dedede'}}>{courseInfo[key]}</Typography>
+  </>)}
+              </Container>
+              {/* <Divider/> */}
+         </>   ))}
+            
+          </Card>
+          
+
 
         </Container>
-      </Box>
+        
+      </Box><Box sx={{height:'10vh',width:'100%',bgcolor:'primary.dark'}}></Box>
 {/* ....................INTERNSHIP..................... */}
       <Container id="Internships" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:10 }}>
 <Typography variant="h4" sx={{ color: 'text.secondary' }}>Internship Training</Typography>
