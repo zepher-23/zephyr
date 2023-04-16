@@ -1,0 +1,308 @@
+{
+    "Language":{
+        "Python":{
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+       
+        },
+        "Java": {
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        },
+        "C": {
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        },
+        "C++": {
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        },
+        "JavaScript": {
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        },
+        "HTML/CSS": {
+            "Description": "",
+            "Duration":[
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        },
+        "PHP": {
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        },
+        "SQL": {
+            "Description": "",
+            "Duration": [
+                "1 Month",
+                "2 Months",
+                "3 Months"
+            ],
+            "Level": "Basic",
+            "Prerequisites": "None",
+            "Mini Projects": "1",
+            "Assigments": "2",
+            "Certificate": "Yes"
+        }
+        
+    },
+    "Career Track":{
+        "Fullstack":{
+            "Description": "",
+            "Prerequisites":["HTML/CSS","JavaScript"],
+            "Level":"Advanced",
+            "Duration":"4 Months",
+            "Assigments":"2",
+            "Projects":"1",
+            "Certificate":"Yes"
+        },
+        "Data Science": {
+            "Description": "",
+            "Prerequisites": ["Python"],
+            "Level": "Advanced",
+            "Duration": "2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Cloud Computing": {
+            "Description": "",
+            "Prerequisites": ["NodeJS"],
+            "Level": "Advanced",
+            "Duration": "2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        
+        "Web Development": {
+            "Description": "",
+            "Prerequisites": "None",
+            "Level": "Basic",
+            "Duration": "2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Android": {
+            "Description": "",
+            "Prerequisites": ["Java"],
+            "Level": "Basic",
+            "Duration": "4 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "AI/ML": {
+            "Description": "",
+            "Prerequisites": ["Python"],
+            "Level": "Advanced",
+            "Duration": "4 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        }
+    },
+    "Frontend":{
+        "React":{
+            "Description": "",
+            "Prerequisites": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Bootstrap": {
+            "Description": "",
+            "Prerequisites": "HTML/CSS",
+            "Level": "Intermediate",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "AngularJS": {
+            "Description": "",
+            "Prerequisites": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "VueJS": {
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        }
+    },
+    "Backend": {
+        "NodeJS": {
+            "Description": "",
+            "Prerequisites": ["JavaScript","HTML/CSS"],
+            "Level": "Intermediate",
+            "Duration":"2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "MongoDB": {
+            "Description": "",
+            "Prerequisites": [
+                "JavaScript",
+                "Basic Database Concepts",
+                "JSON"
+            ],
+            "Level": "Intermediate",
+            "Duration": "2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "MySQL": {
+            "Description": "",
+            "Prerequisites": [
+                "Basic SQL"
+            ],
+            "Level": "Intermediate",
+            "Duration": "2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Django": {
+            "Description": "",
+            "Prerequisites": [
+                "JavaScript",
+                "Python"
+            ],
+            "Level": "Intermediate",
+            "Duration": "2 Months",
+            "Assigments": "2",
+            "Projects": "1",
+            "Certificate": "Yes"
+        }
+    },
+    "Live Project":{
+        
+        "Chat Application":{
+            "Description": "",
+            "Language": ["JavaScript","HTML/CSS"],
+            "Level": "Intermediate",
+            "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Movie Database":{
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript","JSON"],
+            "Level": "Intermediate",
+           "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Music Player":{
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate",
+            "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Social media":{
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate",
+            "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Ecommerce":{
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript","JSON"],
+            "Level": "Intermediate",
+            "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Authentication System":{
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate",
+            "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        },
+        "Payment Gateway":{
+            "Description": "",
+            "Language": ["HTML/CSS","JavaScript"],
+            "Level": "Intermediate", 
+            "Duration": "1 Month",
+            "Projects": "1",
+            "Certificate": "Yes"
+        }
+    }
+    
+    }

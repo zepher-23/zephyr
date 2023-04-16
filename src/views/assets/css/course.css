@@ -1,0 +1,345 @@
+.python-flat {
+    background-image: url('../images/course/python-flat.png');
+    background-size: contain;
+    transition:0.5s ease-in-out;
+}
+
+.python {
+    background-image: url('../images/course/python.png');
+        background-size: contain;
+        transition: 0.5s ease-in-out;
+}
+
+.c-flat {
+    background-image: url('../images/course/c-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+.c {
+    background-image: url('../images/course/c.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.cplus-flat {
+    background-image: url('../images/course/cplus-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+.cplus {
+    background-image: url('../images/course/cplus.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.html-flat {
+    background-image: url('../images/course/html-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+.html {
+    background-image: url('../images/course/html.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.java-flat {
+    background-image: url('../images/course/java-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+.java {
+    background-image: url('../images/course/java.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.javascript-flat {
+    background-image: url('../images/course/javascript-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+.javascript {
+    background-image: url('../images/course/javascript.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.php-flat {
+    background-image: url('../images/course/php-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+.php {
+    background-image: url('../images/course/php.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.sql-flat {
+    background-image: url('../images/course/sql-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.sql {
+    background-image: url('../images/course/sql.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.fullstack-flat {
+    background-image: url('../images/course/fullstack-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.fullstack {
+    background-image: url('../images/course/fullstack.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.datascience-flat {
+    background-image: url('../images/course/datascience-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.datascience {
+    background-image: url('../images/course/datascience.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.cloudcomputing-flat {
+    background-image: url('../images/course/cloudcomputing-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.cloudcomputing {
+    background-image: url('../images/course/cloudcomputing.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.web-flat {
+    background-image: url('../images/course/web-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.web {
+    background-image: url('../images/course/web.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.android-flat {
+    background-image: url('../images/course/android-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.android {
+    background-image: url('../images/course/android.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.ai-flat {
+    background-image: url('../images/course/ai-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.ai {
+    background-image: url('../images/course/ai.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.react-flat {
+    background-image: url('../images/course/react-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.react {
+    background-image: url('../images/course/react.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.bootstrap-flat {
+    background-image: url('../images/course/bootstrap-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.bootstrap {
+    background-image: url('../images/course/bootstrap.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.angularjs-flat {
+    background-image: url('../images/course/angularjs-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.angularjs {
+    background-image: url('../images/course/angularjs.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.vuejs-flat {
+    background-image: url('../images/course/vuejs-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.vuejs {
+    background-image: url('../images/course/vuejs.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.nodejs-flat {
+    background-image: url('../images/course/nodejs-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.nodejs {
+    background-image: url('../images/course/nodejs.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.mongodb-flat {
+    background-image: url('../images/course/mongodb-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.mongodb {
+    background-image: url('../images/course/mongodb.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.mysql-flat {
+    background-image: url('../images/course/mysql-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.mysql {
+    background-image: url('../images/course/mysql.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.django-flat {
+    background-image: url('../images/course/django-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.django {
+    background-image: url('../images/course/django.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.chat-flat {
+    background-image: url('../images/course/chat-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.chat {
+    background-image: url('../images/course/chat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.movie-flat {
+    background-image: url('../images/course/movie-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.movie {
+    background-image: url('../images/course/movie.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.music-flat {
+    background-image: url('../images/course/music-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.music {
+    background-image: url('../images/course/music.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.social-flat {
+    background-image: url('../images/course/social-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.social {
+    background-image: url('../images/course/social.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.ecommerce-flat {
+    background-image: url('../images/course/ecommerce-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.ecommerce {
+    background-image: url('../images/course/ecommerce.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.auth-flat {
+    background-image: url('../images/course/auth-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.auth {
+    background-image: url('../images/course/auth.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.payment-flat {
+    background-image: url('../images/course/payment-flat.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+.payment {
+    background-image: url('../images/course/payment.png');
+    background-size: contain;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+

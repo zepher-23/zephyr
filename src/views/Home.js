@@ -1,6 +1,7 @@
 
 import "../views/assets/css/home.css"
-
+import "./assets/images/course/python-flat.png"
+import "./assets/images/course/python.png"
 import React, { useState, useEffect } from 'react';
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
@@ -20,9 +21,11 @@ import "./assets/images/bg5.jpg"
 import Faq from "./Components/Faq"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
-
-
-const CardHover = ({children}) => {
+import "./assets/css/course.css"
+import jsonData from '../views/assets/courseData.json'
+const json = jsonData
+const CardHover = ({ children }) => {
+  
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseOver = () => {
@@ -34,7 +37,7 @@ const CardHover = ({children}) => {
   };
 
   return (
-    <Card onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'none'}
+    <Card  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'none'}
       elevation={isHovered ? 2 : 0} sx={{ width: '20vw',p:0 }}>
              
 {children}
@@ -42,6 +45,60 @@ const CardHover = ({children}) => {
 
   )
 }
+
+
+const CourseCard = ({ children, image, hoveredImage,id }) => {
+  
+  
+const [isHovered, setIsHovered] = useState(false);
+  const [course, setCourse] = useState(null)
+  const handleCourseOver = () => {
+    
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
+  
+
+  return (
+    <Card id={image} onMouseOver={handleCourseOver}  onMouseOut={handleMouseOut} variant={isHovered ? 'elevation' : 'elevation'}
+         elevation={isHovered ? 12 : 1}
+ sx={{
+         p: 0, backgroundColor:isHovered ? '#f5f5f5':'white', m: 1,
+      '&:hover':{cursor:'pointer'},display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRadius:'10px', borderWidth:'0px',borderStyle:'solid', borderColor:'primary.light',width:'12vw',maxWidth:'12vw'}}>
+           
+
+<Box className={`${isHovered ? hoveredImage : image}`} sx={{minWidth:'4rem',height:'4rem',m:1,mt:2,mb:0,backgroundRepeat:'no-repeat',transform:isHovered ? 'translateY(0)' :'translateY(2.5vh)' ,transition:'0.2s ease-in-out'}}>
+      </Box>
+      <Box sx={{ width: '100%', m: 0, p: 1, mt:2,backgroundColor:'primary.light',transform:isHovered ? 'translateY(0)' :'translateY(10vh)' ,transition:'0.2s ease-in-out'}}>{children}</Box> 
+          </Card>
+  )
+
+
+}
+
+
+
+const CustomTypo = styled(Typography)(({theme})=>({
+  
+  fontWeight: 300,
+  fontSize:'0.9vw',
+  display: 'flex',
+  color:'white',
+  flexGrow:2,
+  justifyContent: 'center',
+  alignItems: "center",
+
+  
+  
+  
+}))
+
+
+
+
 const CustomTabs = styled((props) => (
   <Tabs {...props}
     TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" />
@@ -95,13 +152,33 @@ const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
 
 
 const Home = () => {
+  const [course, setCourse] = useState("Python")
+
+  
+  
   
     const [loading, setLoading] = useState(true);
- const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0);
+  const [view, setView] = useState("Language")
+
+  
+  
+
+
+  const handleCourseClick = (event) => {
+    setCourse(event.target.textContent)
+  
+}
+
 
   const handleChange = (event, newValue) => {
+   
     setValue(newValue);
+    setView(event.target.textContent)
+    
   };
+
+
   useEffect(() => {
      const timer = setTimeout(() => {
       setLoading(false);
@@ -179,7 +256,7 @@ const Home = () => {
           {/* <Divider  sx={{ p: 1, m: 1, width: '100%' }} />         */}
           <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3,mb:0 }}>
             
-            <CardHover >
+            <CardHover sx={{color:"text.secondary"}}  >
               
               <CardMedia className="webdevelopment-service " sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
@@ -207,7 +284,7 @@ const Home = () => {
         </Box>
         <Box sx={{width:'100%'}}>
            <Container sx={{ display: 'flex', flexDirection: 'row', alignItems: 'start', justifyContent: 'space-evenly', width: '100%', p: 2, m: 3, mt:0 }}>
-          <CardHover>
+          <CardHover >
             <CardMedia className="graphicdesign-service" sx={{ height: '30vh', backgroundSize:'contain'  }} />
               
               <CardContent sx={{ p: 2 }}>
@@ -265,7 +342,7 @@ const Home = () => {
         <CustomTabs
           value={value}
           onChange={handleChange}
-            aria-label="styled tabs example"
+            
             
           centered
         >
@@ -273,18 +350,100 @@ const Home = () => {
           <CustomTab label="Career Track" />
             <CustomTab label="Frontend" />
             <CustomTab label="Backend" />
-            <CustomTab label="Projects" />
+            <CustomTab label="Live Projects" />
         </CustomTabs>
         </Box>
         
       </Box>
-      <Box sx={{ width: '100%', height: '60vh' }}>
-        <Container sx={{backgroundColor:'primary.dark',height:'10vh'}}></Container>
-        <Container sx={{backgroundColor:'primary.main',height:'10vh'}}></Container>
-        <Container sx={{backgroundColor:'primary.light',height:'10vh'}}></Container>
+      <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',p:2,backgroundColor:'white' }}>
+        <Container disableGutters sx={{ m: 1 }}>
+         
+          
 
-        </Box>
+          
+          <Container id="Language" onClick={handleCourseClick} sx={{display:view === 'Language' ? 'flex': 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2,transition:'0.5s ease-in-out'}}>
+            {/* <Box sx={{display:'flex' ,flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="python" image="python-flat" hoveredImage="python" sx={{}}>
+                
+                <CustomTypo variant="h6" sx={{}}>Python </CustomTypo>
+                
+              </CourseCard>
+              <CourseCard id="c" image="c-flat" hoveredImage="c" sx={{}}><CustomTypo   variant="h6" >C</CustomTypo></CourseCard>
+              <CourseCard id="cplus" image="cplus-flat" hoveredImage="cplus" sx={{}}><CustomTypo   variant="h6" >C++</CustomTypo></CourseCard>
+            {/* </Box> */}
+            {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="java" image="java-flat" hoveredImage="java" sx={{}}><CustomTypo   variant="h6" >Java</CustomTypo></CourseCard>
+              <CourseCard id="sql" image="sql-flat" hoveredImage="sql" sx={{}}><CustomTypo   variant="h6" >SQL</CustomTypo></CourseCard>
+              <CourseCard id="javascript" image="javascript-flat" hoveredImage="javascript" sx={{}}><CustomTypo   variant="h6" >JavaScript</CustomTypo></CourseCard>
+            {/* </Box> */}
+            {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"start"}}> */}
+              <CourseCard id="html" image="html-flat" hoveredImage="html" sx={{}}><CustomTypo   variant="h6" >HTML/CSS</CustomTypo></CourseCard>
+              <CourseCard id="php" image="php-flat" hoveredImage="php" sx={{}}><CustomTypo   variant="h6" >PHP</CustomTypo></CourseCard>
+              
+            {/* </Box> */}
+      
+        </Container>
+          <Container id="Career Track" sx={{  display: view === 'Career Track' ? 'flex' : 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2, transition: '0.5s ease-in-out' }}>
+             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="fullstack" image="fullstack-flat" hoveredImage="fullstack" sx={{}}><CustomTypo   variant="h6" >Fullstack</CustomTypo></CourseCard>
+              <CourseCard id="datascience" image="datascience-flat" hoveredImage="datascience" sx={{}}><CustomTypo   variant="h6" >Data Science</CustomTypo></CourseCard>
+            {/* </Box> */}
+             {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="cloudcomputing" image="cloudcomputing-flat" hoveredImage="cloudcomputing" sx={{}}><CustomTypo   variant="h6" >Cloud Computing</CustomTypo></CourseCard>
+              <CourseCard id="web" image="web-flat" hoveredImage="web" sx={{ }}><CustomTypo   variant="h6" >Web Development</CustomTypo></CourseCard>
+            {/* </Box> */}
+            {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="android" image="android-flat" hoveredImage="android" sx={{}}><CustomTypo   variant="h6" >Android</CustomTypo></CourseCard>
+              <CourseCard id="ai" image="ai-flat" hoveredImage="ai" sx={{ }}><CustomTypo   variant="h6" >Ai/ML</CustomTypo></CourseCard>
+            {/* </Box> */}
+        </Container>
+          <Container id="Frontend" sx={{ display: view === 'Frontend' ? 'flex' : 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2, transition: '0.5s ease-in-out' }}>
+            {/* <Box sx={{display:'flex',flexDirection:'row',justifyContent:"center"}}> */}
+              <CourseCard id="react" image="react-flat" hoveredImage="react" sx={{}}><CustomTypo   variant="h6" >React</CustomTypo></CourseCard>
+              <CourseCard id="bootstrap" image="bootstrap-flat" hoveredImage="bootstrap" sx={{}}><CustomTypo   variant="h6" >Bootstrap</CustomTypo></CourseCard>
+             <CourseCard id="angularjs" image="angularjs-flat" hoveredImage="angularjs" sx={{}}><CustomTypo   variant="h6" >AngularJS</CustomTypo></CourseCard>
+              <CourseCard id="vuejs" image="vuejs-flat" hoveredImage="vuejs" sx={{}}><CustomTypo   variant="h6" >VueJS</CustomTypo></CourseCard>
+           
+            {/* </Box> */}
 
+        </Container>
+          <Container id="Backend" sx={{ display: view === 'Backend' ? 'flex' : 'none',flexWrap:'wrap', flexDirection: 'row', justifyContent: 'center', backgroundColor: 'white', p: 2, display: view === 'Backend' ? 'flex' : 'none', transition: '0.5s ease-in-out' }}>
+            
+             {/* <Box sx={{display:'flex',flexDirection:'row',justifyContent:"center"}}> */}
+              <CourseCard id="nodejs" image="nodejs-flat" hoveredImage="nodejs" sx={{}}><CustomTypo   variant="h6" >NodeJS</CustomTypo></CourseCard>
+              <CourseCard id="mongodb" image="mongodb-flat" hoveredImage="mongodb" sx={{}}><CustomTypo   variant="h6" >MongoDB</CustomTypo></CourseCard>
+             <CourseCard id="mysql" image="mysql-flat" hoveredImage="mysql" sx={{}}><CustomTypo   variant="h6" >MySQL</CustomTypo></CourseCard>
+              <CourseCard id="django" image="django-flat" hoveredImage="django" sx={{}}><CustomTypo   variant="h6" >Django</CustomTypo></CourseCard>
+           
+            {/* </Box> */}
+        </Container>
+          <Container id="Live Projects" sx={{ flexDirection: 'row', justifyContent: 'center', backgroundColor: 'white', p: 2,flexWrap:'wrap', display: view === 'Live Projects' ? 'flex' : 'none', transition: '0.5s ease-in-out' }}>
+            {/* <Box sx={{display:'flex' ,flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="chat" image="chat-flat" hoveredImage="chat" sx={{}}>
+                
+                <CustomTypo  variant="h6" sx={{}}>Chat Application </CustomTypo>
+                
+              </CourseCard>
+              <CourseCard id="movie" image="movie-flat" hoveredImage="movie" sx={{}}><CustomTypo   variant="h6" >Movie Database</CustomTypo></CourseCard>
+              <CourseCard id="music" image="music-flat" hoveredImage="music" sx={{}}><CustomTypo   variant="h6" >Music Player</CustomTypo></CourseCard>
+            {/* </Box> */}
+            {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"center"}}> */}
+              <CourseCard id="social" image="social-flat" hoveredImage="social" sx={{}}><CustomTypo   variant="h6" >Social Media</CustomTypo></CourseCard>
+              <CourseCard id="ecommerce" image="ecommerce-flat" hoveredImage="ecommerce" sx={{}}><CustomTypo   variant="h6" >Ecommerce</CustomTypo></CourseCard>
+              <CourseCard id="auth" image="auth-flat" hoveredImage="auth" sx={{}}><CustomTypo   variant="h6" sx={{alignItems:'center'}} >Authentication System</CustomTypo></CourseCard>
+            {/* </Box> */}
+            {/* <Box sx={{display:'flex',flexDirection:'column',justifyContent:"start"}}> */}
+              <CourseCard id="payment" image="payment-flat" hoveredImage="payment" sx={{}}><CustomTypo   variant="h6" >Payment Gateway</CustomTypo></CourseCard>
+              
+            {/* </Box> */}
+        </Container>
+        </Container>
+        <Divider orientation="vertical" sx={{bgcolor:'',height:'60vh'}} />
+        <Container sx={{height:'50vh',width:'120vw',backgroundColor:'primary.light',m:2}}>
+
+        </Container>
+      </Box>
+{/* ....................INTERNSHIP..................... */}
       <Container id="Internships" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:10 }}>
 <Typography variant="h4" sx={{ color: 'text.secondary' }}>Internship Training</Typography>
         
