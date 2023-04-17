@@ -2,6 +2,7 @@
     "Language":{
         "Python":{
             "Description": "",
+            "What you will Learn":"In a Python course, you will learn the basics of the language syntax, data structures, file I/O, web development, data science and machine learning, automation and scripting, and best practices and tools for writing clean, efficient code.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -16,6 +17,7 @@
         },
         "Java": {
             "Description": "",
+            "What you will Learn": "In a Java programming course, you will learn object-oriented programming, Java syntax and data types, exception handling, input/output operations, collections and data structures, multithreading, networking, and web development using frameworks such as Spring and Hibernate.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -29,6 +31,7 @@
         },
         "C": {
             "Description": "",
+            "What you will Learn": "In a C programming course, you will learn the basics of the language, including data types, control structures, functions, and arrays, as well as pointers and memory management, file I/O, data structures and algorithms, debugging and error handling, system programming, best practices and tools.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -42,6 +45,7 @@
         },
         "C++": {
             "Description": "",
+            "What you will Learn": "In a C++ programming course, you will learn object-oriented programming, C++ syntax and data types, algorithms and data structures, templates, exception handling, input/output operations, and memory management.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -55,6 +59,7 @@
         },
         "JavaScript": {
             "Description": "",
+            "What you will Learn": "In a JavaScript programming course, you will learn JavaScript syntax and data types, DOM manipulation, event handling, asynchronous programming, APIs and JSON, and front-end frameworks such as React and Angular.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -68,6 +73,7 @@
         },
         "HTML/CSS": {
             "Description": "",
+            "What you will Learn": "In an HTML and CSS course, you will learn how to create web pages using HTML to structure content and CSS to style and layout the page. You will learn HTML tags, attributes, and semantic markup, CSS selectors, properties, and box model, responsive design, and how to use tools and frameworks like Bootstrap and Sass.",
             "Duration":[
                 "1 Month",
                 "2 Months",
@@ -81,6 +87,7 @@
         },
         "PHP": {
             "Description": "",
+            "What you will Learn": "In a PHP programming course, you will learn how to create dynamic web pages and web applications using PHP. You will learn PHP syntax, data types, control structures, functions, and arrays. You will also learn how to connect to databases, query and manipulate data, handle forms and user input, manage sessions and cookies, and work with files and directories.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -94,6 +101,7 @@
         },
         "SQL": {
             "Description": "",
+            "What you will Learn": "In a SQL course, you will learn how to create, read, update, and delete data from relational databases using SQL queries. You will learn about data types, tables, relationships, joins, aggregation functions, subqueries, views, transactions, indexing, and stored procedures.",
             "Duration": [
                 "1 Month",
                 "2 Months",
@@ -110,6 +118,7 @@
     "Career Track":{
         "Fullstack":{
             "Description": "",
+            "What you will Learn": "In a full-stack development course, you will learn both front-end and back-end web development. On the front-end, you will learn HTML, CSS, and JavaScript, as well as popular front-end framework such as React. On the back-end, you will learn server-side programming language such as PHP, as well as databases such as MongoDB. You will also learn how to use web servers, APIs, version control, and deployment tools to develop and deploy full-stack web applications.",
             "Prerequisites":["HTML/CSS","JavaScript"],
             "Level":"Advanced",
             "Duration":["4 Months"],
@@ -119,6 +128,7 @@
         },
         "Data Science": {
             "Description": "",
+            "What you will Learn": "In a data science course, you will learn how to extract insights and knowledge from data using statistical analysis, machine learning, and data visualization techniques. You will learn how to collect and clean data, explore and visualize data, build and evaluate predictive models, and communicate insights effectively.",
             "Prerequisites": ["Python"],
             "Level": "Advanced",
             "Duration": ["2 Months"],
@@ -128,6 +138,7 @@
         },
         "Cloud Computing": {
             "Description": "",
+            "What you will Learn": "In a cloud computing course, you will learn how to design, deploy, and manage applications and services in cloud environments. You will learn about different cloud models, such as Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS), as well as different cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).",
             "Prerequisites": ["NodeJS"],
             "Level": "Advanced",
             "Duration": ["2 Months"],
@@ -138,6 +149,7 @@
         
         "Web Development": {
             "Description": "",
+            "What you will Learn": "In a web development course, you will learn how to build and deploy web applications using HTML, CSS, JavaScript. You will learn how to create responsive and interactive web pages, design and query databases, build and test APIs, and deploy web applications to production environments. ",
             "Prerequisites": ["None"],
             "Level": "Basic",
             "Duration": ["2 Months"],
@@ -146,7 +158,8 @@
             "Certificate": "Yes"
         },
         "Android": {
-            "Description": "",
+            "Description": "In an Android development course, you will learn how to build and publish mobile applications for the Android operating system. You will learn how to design user interfaces, handle user input, and create layouts using XML and Android's UI toolkit. You will also learn how to use Java or Kotlin programming languages to write Android application logic, how to work with data storage, and how to integrate with web services and APIs.",
+            "What you will Learn": "",
             "Prerequisites": ["Java"],
             "Level": "Basic",
             "Duration": ["4 Months"],
@@ -156,6 +169,7 @@
         },
         "AI/ML": {
             "Description": "",
+            "What you will Learn": "In an AI/ML course, you will learn how to build intelligent systems that can learn from data and make predictions or decisions based on that data. You will learn how to use machine learning algorithms, such as linear regression, decision trees, and neural networks, to analyze and classify data. You will also learn how to train and evaluate models, preprocess data, and deal with common problems in AI/ML, such as overfitting and underfitting. ",
             "Prerequisites": ["Python"],
             "Level": "Advanced",
             "Duration": ["4 Months"],
@@ -167,6 +181,7 @@
     "Frontend":{
         "React":{
             "Description": "",
+            "What you will Learn": "In a React course, you will learn how to build user interfaces using React, a popular JavaScript library for building UI components. You will learn how to create and manage components, use props and state to handle data and events, and how to manage the component lifecycle.",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
             "Duration": ["2 Months"],
@@ -176,6 +191,7 @@
         },
         "Bootstrap": {
             "Description": "",
+            "What you will Learn": "In a Bootstrap course, you will learn how to build responsive and mobile-first websites using the Bootstrap framework, a popular front-end framework for building responsive, mobile-ready websites. You will learn how to use Bootstrap's grid system, components, and utilities to create responsive and accessible web pages.",
             "Prerequisites": ["HTML/CSS"],
             "Level": "Intermediate",
             "Duration": ["2 Months"],
@@ -185,6 +201,7 @@
         },
         "AngularJS": {
             "Description": "",
+            "What you will Learn": "In an AngularJS course, you will learn how to build dynamic web applications using AngularJS, a popular front-end JavaScript framework. You will learn how to use AngularJS to create and manage web components, handle data, and create templates and forms. ",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
             "Duration": ["2 Months"],
@@ -194,6 +211,7 @@
         },
         "VueJS": {
             "Description": "",
+            "What you will Learn": "In a Vue.js course, you will learn how to build reactive and scalable web applications using Vue.js, a progressive JavaScript framework. You will learn how to use Vue.js to create and manage web components, handle data and events, and build reactive user interfaces. ",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
             "Duration": ["2 Months"],
@@ -205,6 +223,7 @@
     "Backend": {
         "NodeJS": {
             "Description": "",
+            "What you will Learn": "In a Node.js course, you will learn how to build scalable and high-performance applications using Node.js, a popular server-side JavaScript runtime. You will learn how to use Node.js to handle HTTP requests, create APIs and web services, work with databases, and implement security features.",
             "Prerequisites": ["JavaScript","HTML/CSS"],
             "Level": "Intermediate",
             "Duration":["2 Months"],
@@ -214,6 +233,7 @@
         },
         "MongoDB": {
             "Description": "",
+            "What you will Learn": "In a MongoDB course, you will learn how to work with MongoDB, a popular NoSQL database, and how to use it to store and manage data in your applications. You will learn how to use MongoDB's query language, indexing, and aggregation features to manipulate data and how to integrate MongoDB with Node.js.",
             "Prerequisites": [
                 "JavaScript",
                 "Basic Database Concepts",
@@ -227,6 +247,7 @@
         },
         "MySQL": {
             "Description": "",
+            "What you will Learn": "In a MySQL course, you will learn how to work with MySQL, a popular relational database, and how to use it to store and manage data in your applications. You will learn how to use MySQL's query language, indexing, and optimization features to manipulate data and how to integrate MySQL with Node.js.",
             "Prerequisites": [
                 "Basic SQL"
             ],
@@ -238,6 +259,7 @@
         },
         "Django": {
             "Description": "",
+            "What you will Learn": "In a Django course, you will learn how to build web applications using Django, a popular Python web framework. You will learn how to use Django to create and manage web components, handle data and events, and build web templates and forms.",
             "Prerequisites": [
                 "JavaScript",
                 "Python"
@@ -253,6 +275,7 @@
         
         "Chat Application":{
             "Description": "",
+            "What you will Learn": "You will learn how to build real-time communication features using web sockets, how to store and retrieve chat messages in a database, and how to implement user authentication and authorization.",
             "Language": ["JavaScript","HTML/CSS"],
             "Level": "Intermediate",
             "Duration": ["1 Month"],
@@ -261,6 +284,7 @@
         },
         "Movie Database":{
             "Description": "",
+            "What you will Learn": "You will learn how to build a database to store and manage movie data, how to search and filter movies based on various criteria, and how to implement user authentication and authorization.",
             "Language": ["HTML/CSS","JavaScript","JSON"],
             "Level": "Intermediate",
            "Duration": ["1 Month"],
@@ -269,6 +293,7 @@
         },
         "Music Player":{
             "Description": "",
+            "What you will Learn": "You will learn how to use audio and media APIs in JavaScript to play audio files, how to implement audio controls like play, pause, and seek, and how to work with audio metadata.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
             "Duration": ["1 Month"],
@@ -277,6 +302,7 @@
         },
         "Social Media":{
             "Description": "",
+            "What you will Learn": "You will learn how to build user profiles, create posts and comments, handle likes and shares, and implement real-time updates using web sockets.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
             "Duration": ["1 Month"],
@@ -285,6 +311,7 @@
         },
         "Ecommerce":{
             "Description": "",
+            "What you will Learn": "You will learn how to build an online store, handle product listings and orders, implement payment processing features using a payment gateway, and manage customer information.",
             "Language": ["HTML/CSS","JavaScript","JSON"],
             "Level": "Intermediate",
             "Duration": ["1 Month"],
@@ -293,6 +320,7 @@
         },
         "Authentication System":{
             "Description": "",
+            "What you will Learn": " You will learn how to build a secure authentication system, handle user registration and login, implement password reset and email verification features, and store user credentials securely.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
             "Duration": ["1 Month"],
@@ -301,6 +329,7 @@
         },
         "Payment Gateway":{
             "Description": "",
+            "What you will Learn": "You will learn how to implement payment processing features using a payment gateway API, handle payment transactions securely, and integrate payment processing with other features like order management and invoicing.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate", 
             "Duration": ["1 Month"],

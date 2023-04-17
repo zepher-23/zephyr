@@ -4,10 +4,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Link from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
-import { Paper, Menu, MenuItem } from '@mui/material';
 import Box from "@mui/material/Box";
 
-import Fade from "@mui/material/Fade";
 
 const NavLink = styled(Link)({
     transition:'0.1s ease',
@@ -19,6 +17,7 @@ const NavLink = styled(Link)({
         
         
     },
+
     '&:active': {
         transform: 'translateY(-3px)',
         borderBottom: `3px solid #fff`,
@@ -58,14 +57,24 @@ const Navbar = () => {
 
 
   useEffect(() => {
-    let prevScrollPos = window.pageYOffset;
+      let prevScrollPos = window.pageYOffset;
+      let maxScroll = window.pageYOffset;
+      let scrollPercent = 0;
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      const visible = prevScrollPos > currentScrollPos || currentScrollPos < 150;
-      setVisible(visible);
+        const currentScrollPos = window.pageYOffset;
+       
+      const visible =( currentScrollPos < scrollPercent) || currentScrollPos < 150;
+        setVisible(visible);
+        if (currentScrollPos > maxScroll)
+        {
+            maxScroll = currentScrollPos;
+            scrollPercent = 0.65 * maxScroll
+            
+            }
       prevScrollPos = currentScrollPos;
     };
-
+      
+      
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);

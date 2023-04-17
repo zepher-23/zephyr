@@ -14,7 +14,7 @@ import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider"
 import Link from "@mui/material/Link"
 import cssanimation from "./assets/css/cssanimation.css"
-import { Button, CardActionArea, CardActions, styled } from '@mui/material';
+import { Button, CardActions, styled } from '@mui/material';
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -23,8 +23,11 @@ import Faq from "./Components/Faq"
 import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import "./assets/css/course.css"
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import jsonData from '../views/assets/courseData.json'
-import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 const json = jsonData
  
 
@@ -49,7 +52,6 @@ const CardHover = ({ children }) => {
 
   )
 }
- var C = ""
 
 const CourseCard = ({ children, image,setImageClass, hoveredImage,id,setCourse }) => {
   
@@ -370,13 +372,13 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         </Box>
         
       </Box>
-      <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',p:1,backgroundColor:'white' }}>
+      <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',p:1,pt:0,backgroundColor:'white' }}>
         <Container disableGutters sx={{ m: 1 }}>
          
           
 
           
-          <Container  id="Language" sx={{display:view === 'Language' ? 'flex': 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2,transition:'0.5s ease-in-out'}}>
+          <Container  id="Language" sx={{display:view === 'Language' ? 'flex': 'none',flexWrap:'wrap',flexDirection:'row',justifyContent:'center', backgroundColor:'white' ,p:2,pt:0,transition:'0.5s ease-in-out'}}>
             {/* <Box sx={{display:'flex' ,flexDirection:'column',justifyContent:"center"}}> */}
               <CourseCard setImageClass={setImageClass} id="Python" setCourse={setCourse}   image="python-flat" hoveredImage="python" sx={{}}>
                 
@@ -454,7 +456,7 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         </Container>
         </Container>
         <Divider orientation="vertical" sx={{bgcolor:'',height:'60vh'}} />
-        <Container sx={{width:'100vw',backgroundColor:'white',m:2}}>
+        <Container sx={{maxWidth:'130vw',backgroundColor:'white',m:2}}>
           <Container sx={{ p: 3 }}>
             <Box sx={{ display: 'flex',justifyContent:'center', flexDirection: 'row' }}>
               <Box className={imageClass} sx={{ backgroundRepeat: 'no-repeat', m:1,ml:0, width: '4rem', height: '4rem' }}></Box>
@@ -465,7 +467,7 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
               the fundamentals of programming, develop problem-solving skills, and build a strong foundation in programming
               that can help you excel in any programming language.</Typography>
           </Container>
-          <Card  elevation={4} sx={{p:1,mx:3,backgroundColor:'primary.main'}}>
+          <Card  elevation={4} sx={{p:1,mx:3,backgroundColor:'white',width:'40vw'}}>
 
             {Object.keys(courseInfo).map((key, index) => (<>
               <Container key={key} sx={{ display: 'flex', flexDirection: 'row',alignItems:'center', backgroundColor: index % 2 === 0 ? 'primary.main' : 'primary.light' }} >
@@ -476,8 +478,25 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         <Chip sx={{bgcolor:'primary.dark',height:'25px',color:'#dedede',ml:1,transition:'0.5s ease-in-out'}} label={item} key={index} />
 ))}
  </>
-                ) : key === "Description" ? null : (<>
-                  <Typography variant="subtitle2" sx={{ m: 1, color: '#f0f0f0', flexGrow: '1' }}>{key}: </Typography>
+                ) : key === "Description" ? null : key === "What you will Learn" ? (<>
+                    <Accordion elevation={0} sx={{backgroundColor:'primary.light'}}>
+        <AccordionSummary sx={{alignItems:'center', display:'flex',height:'2vh',pl:1,color: '#f0f0f0','&.MuiAccordionSummary-content':{mt:'-20px',mb:'-20px'},'&.Mui-expanded': {
+        mt:'-10px',mb:'-15px'
+      },transition:'0.3s ease'}}
+          expandIcon={<ExpandMoreIcon sx={{color: '#f0f0f0'}} />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography variant="subtitle2" sx={{  }}>{key}? </Typography>
+        </AccordionSummary>
+        <AccordionDetails sx={{p:1,m:0,pt:0}}>
+          <Typography variant="subtitle2" sx={{fontWeight:'300',color:'#dedede'}}>{courseInfo[key]}</Typography>
+        </AccordionDetails>
+      </Accordion>
+                  
+      
+  </>) : (<>
+                  <Typography variant="subtitle2" sx={{ m: 1, color: '#f0f0f0', flexGrow: '1',width:'40vw' }}>{key}: </Typography>
       <Typography variant="subtitle2" sx={{m:1,fontWeight:'300',color:'#dedede'}}>{courseInfo[key]}</Typography>
   </>)}
               </Container>
