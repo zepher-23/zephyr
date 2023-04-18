@@ -57,7 +57,7 @@ const Hero = () => {
                     {/* <HeroText className="cssanimation fadeInBottom delay-1" variant="body" color="white" sx={{m:0}} >Technologies & Solutions Pvt. Ltd</HeroText> */}
         <HeroText className="cssanimation blurIn delay-1" variant="h4"  sx={{color:'text.secondary',fontWeight:"400",fontStyle:"italic", mb: 4 }}>
          " Your solution for seamless digital transformation "</HeroText>
-                    {/* <Service className="cssanimation blurIn delay-800" sx={{left:'50px',top:'35vh'}} variant="h5">
+                    <Service className="cssanimation blurIn delay-800" sx={{left:'50px',top:'35vh'}} variant="h5">
                         Digital marketing
                     </Service>
                      <Service className="cssanimation blurIn delay-500" sx={{left:'100px',bottom:'18vh',width:'300px'}} variant="h4">
@@ -95,7 +95,7 @@ const Hero = () => {
                     </Service>
                     <Service className="cssanimation blurIn delay-700" sx={{left:'55vw',top:'33vh', width:'200px'}} variant="h6">
                         Creative Design
-                    </Service> */}
+                    </Service>
                     
         <Button variant="contained" className="cssanimation fadeInBottom delay-1" size="large">
           Learn More

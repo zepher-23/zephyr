@@ -58,19 +58,13 @@ const Navbar = () => {
 
   useEffect(() => {
       let prevScrollPos = window.pageYOffset;
-      let maxScroll = window.pageYOffset;
-      let scrollPercent = 0;
+     
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
        
-      const visible =( currentScrollPos < scrollPercent) || currentScrollPos < 150;
-        setVisible(visible);
-        if (currentScrollPos > maxScroll)
-        {
-            maxScroll = currentScrollPos;
-            scrollPercent = 0.65 * maxScroll
-            
-            }
+      const visible = currentScrollPos < 550 ;
+     setVisible(visible)
+       
       prevScrollPos = currentScrollPos;
     };
       
