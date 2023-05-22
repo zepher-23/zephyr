@@ -30,7 +30,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import jsonData from '../views/assets/courseData.json'
 const json = jsonData
  
-
+// SERVICE CARD HOVER......................
 const CardHover = ({ children }) => {
   
   const [isHovered, setIsHovered] = useState(false);
@@ -43,6 +43,7 @@ const CardHover = ({ children }) => {
     setIsHovered(false);
   };
 
+
   return (
     <Card  onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} 
       elevation={isHovered ? 2 : 0} sx={{ width: '20vw',p:0 }}>
@@ -53,44 +54,39 @@ const CardHover = ({ children }) => {
   )
 }
 
+
+//COURSE CARD COMPONENT.........................................
 const CourseCard = ({ children, image,setImageClass, hoveredImage,id,setCourse }) => {
-  
-
 const [isHovered, setIsHovered] = useState(false);
-   
-  
-  
-  
-
- 
-
   const handleCourseOver = () => {
-    
     setIsHovered(true);
   };
   const handleMouseOut = () => {
     setIsHovered(false);
   };
   const handleCourseClick = () => {
-
     setCourse(id)
     setImageClass(hoveredImage)
-    
-    
   
 }
-
   return (
     <Card  onMouseOver={handleCourseOver} onClick={handleCourseClick} onMouseOut={handleMouseOut} 
          elevation={isHovered ? 12 : 2}
  sx={{
          p: 0, backgroundColor:isHovered ? '#f5f5f5':'white', m: 1,
-      '&:hover':{cursor:'pointer'},display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',borderRadius:'10px', borderWidth:'0px',borderStyle:'solid', borderColor:'primary.light'}}>
-           
-
-<Box className={`${isHovered ? hoveredImage : image}`} sx={{minWidth:'4rem',height:'4rem',m:3,mt:2,mb:0,backgroundRepeat:'no-repeat' ,transition:'0.2s ease-in-out'}}>
+   '&:hover': { cursor: 'pointer' }, display: 'flex', flexDirection: 'column',
+   justifyContent: 'center', alignItems: 'center', borderRadius: '10px',
+        borderWidth: '0px', borderStyle: 'solid', borderColor: 'primary.light'
+      }}>
+      <Box className={`${isHovered ? hoveredImage : image}`} sx={{
+        minWidth: '4rem', height: '4rem', m: 3, mt: 2, mb: 0, backgroundRepeat: 'no-repeat',
+        transform: isHovered ? "translateY(18px) scale(1.3)" : "0 1", transition: '0.2s ease-in-out'
+      }}>
       </Box>
-      <Box sx={{ width: '100%', m: 0,mx:2, p: 1, mt:2,backgroundColor:isHovered?'primary.main':'primary.light' ,transition:'0.2s ease-in-out'}}>{children}</Box> 
+      <Box sx={{
+        width: '100%', m: 0, mx: 2, p: 1, mt: 2, backgroundColor: isHovered ? 'primary.main' : 'primary.light',
+        transform: isHovered ? "translateY(50px)" : "", transition: '0.2s ease-in-out'
+      }}>{children}</Box> 
         </Card>
   )
 
@@ -108,15 +104,12 @@ const CustomTypo = styled(Typography)(({theme})=>({
   flexGrow:2,
   justifyContent: 'center',
   alignItems: "center",
-
-  
-  
   
 }))
 
 
 
-
+//CUSTOM COURSE SELECTION TAB AREA......................................
 const CustomTabs = styled((props) => (
   <Tabs {...props}
     TabIndicatorProps={{ children: <span className="MuiTabs-indicatorSpan" />
@@ -132,9 +125,7 @@ const CustomTabs = styled((props) => (
     // borderTopLeftRadius:'5px',
     // borderTopRightRadius:'5px',
       borderRadius: '10px',
-      
       marginBottom: '3.5px',
-   
   },
   '& .MuiTabs-indicatorSpan': {
     maxWidth: 60,
@@ -146,7 +137,7 @@ const CustomTabs = styled((props) => (
   },
 
 })
-  
+  // CUSTOM COURSE TABS ..................................
 const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
   ({ theme }) => ({
     textTransform: 'none',
@@ -167,7 +158,7 @@ const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 
-
+//MAIN HOME COMPONENT ................................................
 
 const Home = () => {
   const [course, setCourse] = useState('Python')
@@ -205,7 +196,7 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
   }, []);
 
 
- 
+
   return (
     
     <Box>
@@ -264,7 +255,9 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         </Container>
 
       </Container> */}
-      
+
+
+      {/* .................SERVICES.................... */}
       <Container id="Services" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:5 }}>
         <Typography variant="h4" sx={{ color: 'text.secondary' }}>Services</Typography>
         
@@ -330,7 +323,8 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         </Box>
 
       </Container>
-      {/* ....................COURSES.................. */}
+      {/* ...................................................SERVICE ENDS............................................... */}
+      {/* ....................COURSES SELECTION.................. */}
       
       <Box className="coursesBanner" sx={{width:'100%'}}>
         <Container sx={{ p: 10, width:'60VW',m:0,ml:4,mt:5 }}>
@@ -355,7 +349,9 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         width: '100%', backgroundColor: 'primary.main', py: 1, display: 'flex', flexDirection: 'row',
       justifyContent:'center'}}>
  
-        <Box sx={{px:2,backgroundColor:'primary.dark',borderRadius:'10px'}}>
+        <Box sx={{ px: 2, backgroundColor: 'primary.dark', borderRadius: '10px' }}>
+          
+          {/* ..........................COURSE TABS................................. */}
         <CustomTabs
           value={value}
           onChange={handleChange}
@@ -372,6 +368,9 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
         </Box>
         
       </Box>
+
+
+      {/* .....................................COURSE INFORMATION.................................... */}
       <Box sx={{display:'flex',flexDirection:'row',alignItems:'center',p:1,pt:0,backgroundColor:'white' }}>
         <Container disableGutters sx={{ m: 1 }}>
          
@@ -462,10 +461,7 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
               <Box className={imageClass} sx={{ backgroundRepeat: 'no-repeat', m:1,ml:0, width: '4rem', height: '4rem' }}></Box>
  <Typography variant="h4" sx={{ color: 'text.secondary', flexGrow: '1' ,display:'flex',alignItems:'center'}}>{course}</Typography>
             </Box>
-            <Typography variant="body1" >Our programming courses are designed to provide you with the essential
-              skills and knowledge to kick-start your software career. With our expert instructors, you'll learn
-              the fundamentals of programming, develop problem-solving skills, and build a strong foundation in programming
-              that can help you excel in any programming language.</Typography>
+            <Typography variant="body1" >{courseInfo.Description }</Typography>
           </Container>
           <Card  elevation={4} sx={{p:1,mx:3,backgroundColor:'white',width:'40vw'}}>
 
@@ -509,8 +505,13 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
 
         </Container>
         
-      </Box><Box sx={{height:'10vh',width:'100%',bgcolor:'primary.dark'}}></Box>
-{/* ....................INTERNSHIP..................... */}
+      </Box><Box sx={{ height: '10vh', width: '100%', bgcolor: 'primary.dark' }}></Box>
+      
+      {/* ......................................END OF COURSE SELECTION............................................ */}
+
+
+
+{/* ....................INTERNSHIP SECTION..................... */}
       <Container id="Internships" sx={{width:'100%',display:'flex',flexDirection:'column',alignItems:'center', mt:10 }}>
 <Typography variant="h4" sx={{ color: 'text.secondary' }}>Internship Training</Typography>
         
@@ -581,7 +582,7 @@ const initialCourse = ['Python',"Fullstack","React","NodeJS","Chat Application"]
           
         </Container>
 
-        {/* .................. */}
+        {/* .................INTERNSHIP SECTION TWO.................. */}
          <Container sx={{display:'flex',flexDirection:'row', justifyContent:'space-between',m:2,p:2,pt:0,width:'100%'}}>
          
           <Card variant="elevation" elevation={2} sx={{ m: 3, width: '100%' }}>

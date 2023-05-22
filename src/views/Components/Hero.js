@@ -10,17 +10,10 @@ import 'animate.css'
 import '../assets/css/cssanimation.css'
 
 const HeroBackground = styled(Box)({
-    
   height: '85vh',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-});
-
-const HeroText = styled(Typography)({
-    
-  
-  textAlign: 'center',
 });
 
 const Service = styled(Typography)(({theme})=>({
@@ -50,13 +43,15 @@ const Hero = () => {
             <Box className='hero-grad' sx={{height:'85vh', width:'100%'}}>
 
             
-      <Container maxWidth="lg" sx={{display:'flex',flexDirection:'column', alignItems:'center'}}>
-        <HeroText className="cssanimation blurIn delay-1 " variant="h1" sx={{color:'primary.light', mb: 0, textShadow: '0px 0px 10px rgba(255, 255, 255, 0.5)' }}>
+      <Container maxWidth="lg" sx={{display:'flex',flexDirection:'column', alignItems:'start',justifyContent:'start'}}>
+        {/* <HeroText className="cssanimation blurIn delay-1 " variant="h1" sx={{color:'primary.light', mb: 0, textShadow: '0px 0px 10px rgba(255, 255, 255, 0.5)' }}>
            
-                    </HeroText>
+                    </HeroText> */}
                     {/* <HeroText className="cssanimation fadeInBottom delay-1" variant="body" color="white" sx={{m:0}} >Technologies & Solutions Pvt. Ltd</HeroText> */}
-        <HeroText className="cssanimation blurIn delay-1" variant="h4"  sx={{color:'text.secondary',fontWeight:"400",fontStyle:"italic", mb: 4 }}>
-         " Your solution for seamless digital transformation "</HeroText>
+       
+                      <Typography variant="h3" sx={{color:'primary.main',maxWidth:'50vw',fontWeight:'500',mb:0}}> Transform your technical career with <span >Zephyr</span> </Typography>  
+                        
+                      <Typography variant="h6" sx={{color:'text.secondary',fontWeight:'300',mb:3}}> where learning meets real-world experience</Typography> 
                     <Service className="cssanimation blurIn delay-800" sx={{left:'50px',top:'35vh'}} variant="h5">
                         Digital marketing
                     </Service>

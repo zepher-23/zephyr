@@ -7,7 +7,6 @@ import lightBlue from "@mui/material/colors/lightBlue";
 
 import './App.css';
 import './views/assets/css/fonts.css'
-import  light from '@mui/material/styles/createPalette';
 
 const theme = createTheme({
   palette: {
@@ -16,7 +15,6 @@ const theme = createTheme({
     primary: {
       main: '#3f6fb5',
       text: '#c2e1f8',
-      
       
     },
     secondary: {
@@ -31,7 +29,8 @@ const theme = createTheme({
     fontFamily: 'Poppins, Roboto, Open Sans, sans-serif',
     body1: {
       fontWeight:'200'
-    }
+    },
+
       
         
       

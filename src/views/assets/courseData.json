@@ -1,7 +1,7 @@
 {
     "Language":{
         "Python":{
-            "Description": "",
+            "Description": "Learning Python can open up various career opportunities such as Python Developer, Data Scientist, Web Developer, DevOps Engineer, and Software Engineer. The minimum salary in rupees for a Python-related job varies based on several factors, but the average entry-level salary for a Python developer in India ranges from 3-6 lakhs per annum.",
             "What you will Learn":"In a Python course, you will learn the basics of the language syntax, data structures, file I/O, web development, data science and machine learning, automation and scripting, and best practices and tools for writing clean, efficient code.",
             "Duration": [
                 "1 Month",
@@ -16,7 +16,7 @@
        
         },
         "Java": {
-            "Description": "",
+            "Description": "Java is a widely-used programming language that is popular for its platform-independence, security features, and object-oriented programming (OOP) capabilities. Learning Java can lead to career opportunities in software development, web development, mobile app development, and more. The average entry-level salary for a Java developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a Java programming course, you will learn object-oriented programming, Java syntax and data types, exception handling, input/output operations, collections and data structures, multithreading, networking, and web development using frameworks such as Spring and Hibernate.",
             "Duration": [
                 "1 Month",
@@ -30,7 +30,7 @@
             "Certificate": "Yes"
         },
         "C": {
-            "Description": "",
+            "Description": "Learning C programming language can lead to career opportunities in systems programming, game development, embedded systems engineering, and application development. In India, the average entry-level salary for a C programmer can range from 3-5 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a C programming course, you will learn the basics of the language, including data types, control structures, functions, and arrays, as well as pointers and memory management, file I/O, data structures and algorithms, debugging and error handling, system programming, best practices and tools.",
             "Duration": [
                 "1 Month",
@@ -44,7 +44,7 @@
             "Certificate": "Yes"
         },
         "C++": {
-            "Description": "",
+            "Description": "Learning C++ can lead to career opportunities in game development, systems programming, software engineering, and embedded systems engineering. In India, the average entry-level salary for a C++ programmer can range from 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a C++ programming course, you will learn object-oriented programming, C++ syntax and data types, algorithms and data structures, templates, exception handling, input/output operations, and memory management.",
             "Duration": [
                 "1 Month",
@@ -58,7 +58,7 @@
             "Certificate": "Yes"
         },
         "JavaScript": {
-            "Description": "",
+            "Description": "JavaScript (JS) is a popular programming language used to create dynamic and interactive web pages. Learning JS can lead to career opportunities in web development, front-end development, mobile app development, and game development. The average entry-level salary for a JavaScript developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a JavaScript programming course, you will learn JavaScript syntax and data types, DOM manipulation, event handling, asynchronous programming, APIs and JSON, and front-end frameworks such as React and Angular.",
             "Duration": [
                 "1 Month",
@@ -72,7 +72,7 @@
             "Certificate": "Yes"
         },
         "HTML/CSS": {
-            "Description": "",
+            "Description": "HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are the building blocks of web development. Learning HTML/CSS can lead to career opportunities in web development, front-end development, and UX/UI design. The average entry-level salary for a web developer with HTML/CSS skills in India is around 2-4 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In an HTML and CSS course, you will learn how to create web pages using HTML to structure content and CSS to style and layout the page. You will learn HTML tags, attributes, and semantic markup, CSS selectors, properties, and box model, responsive design, and how to use tools and frameworks like Bootstrap and Sass.",
             "Duration":[
                 "1 Month",
@@ -86,7 +86,7 @@
             "Certificate": "Yes"
         },
         "PHP": {
-            "Description": "",
+            "Description": "PHP (Hypertext Preprocessor) is a widely-used server-side scripting language that is popular for web development. Learning PHP can lead to career opportunities in web development, back-end development, and software engineering. The average entry-level salary for a PHP developer in India is around 2-5 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a PHP programming course, you will learn how to create dynamic web pages and web applications using PHP. You will learn PHP syntax, data types, control structures, functions, and arrays. You will also learn how to connect to databases, query and manipulate data, handle forms and user input, manage sessions and cookies, and work with files and directories.",
             "Duration": [
                 "1 Month",
@@ -100,7 +100,7 @@
             "Certificate": "Yes"
         },
         "SQL": {
-            "Description": "",
+            "Description": "SQL (Structured Query Language) is a programming language used for managing and manipulating relational databases. Learning SQL can lead to career opportunities in database administration, data analysis, business intelligence, and software engineering. The average entry-level salary for an SQL developer in India is around 3-5 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a SQL course, you will learn how to create, read, update, and delete data from relational databases using SQL queries. You will learn about data types, tables, relationships, joins, aggregation functions, subqueries, views, transactions, indexing, and stored procedures.",
             "Duration": [
                 "1 Month",
@@ -117,7 +117,7 @@
     },
     "Career Track":{
         "Fullstack":{
-            "Description": "",
+            "Description": "Full-stack development refers to the development of both front-end and back-end components of a web application. Learning full-stack development can lead to career opportunities in web development, software engineering, and mobile app development. The average entry-level salary for a full-stack developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a full-stack development course, you will learn both front-end and back-end web development. On the front-end, you will learn HTML, CSS, and JavaScript, as well as popular front-end framework such as React. On the back-end, you will learn server-side programming language such as PHP, as well as databases such as MongoDB. You will also learn how to use web servers, APIs, version control, and deployment tools to develop and deploy full-stack web applications.",
             "Prerequisites":["HTML/CSS","JavaScript"],
             "Level":"Advanced",
@@ -127,7 +127,7 @@
             "Certificate":"Yes"
         },
         "Data Science": {
-            "Description": "",
+            "Description": "Data science is an interdisciplinary field that involves the use of statistical and computational methods to extract insights and knowledge from data. Learning data science can lead to career opportunities in data analysis, machine learning, data engineering, and data visualization. The average entry-level salary for a data scientist in India is around 5-8 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a data science course, you will learn how to extract insights and knowledge from data using statistical analysis, machine learning, and data visualization techniques. You will learn how to collect and clean data, explore and visualize data, build and evaluate predictive models, and communicate insights effectively.",
             "Prerequisites": ["Python"],
             "Level": "Advanced",
@@ -137,7 +137,7 @@
             "Certificate": "Yes"
         },
         "Cloud Computing": {
-            "Description": "",
+            "Description": "Cloud computing refers to the delivery of computing services such as servers, storage, databases, networking, software, analytics, and more over the internet or \"the cloud\". Learning cloud computing can lead to career opportunities in cloud architecture, cloud engineering, DevOps, and cloud security. The average entry-level salary for a cloud computing professional in India is around 4-7 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a cloud computing course, you will learn how to design, deploy, and manage applications and services in cloud environments. You will learn about different cloud models, such as Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS), as well as different cloud providers like Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).",
             "Prerequisites": ["NodeJS"],
             "Level": "Advanced",
@@ -148,7 +148,7 @@
         },
         
         "Web Development": {
-            "Description": "",
+            "Description": "Web development involves the creation of websites or web applications for the internet or an intranet. Learning web development can lead to career opportunities in front-end development, back-end development, full-stack development, and UX/UI design. The average entry-level salary for a web developer in India is around 2-5 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a web development course, you will learn how to build and deploy web applications using HTML, CSS, JavaScript. You will learn how to create responsive and interactive web pages, design and query databases, build and test APIs, and deploy web applications to production environments. ",
             "Prerequisites": ["None"],
             "Level": "Basic",
@@ -158,8 +158,8 @@
             "Certificate": "Yes"
         },
         "Android": {
-            "Description": "In an Android development course, you will learn how to build and publish mobile applications for the Android operating system. You will learn how to design user interfaces, handle user input, and create layouts using XML and Android's UI toolkit. You will also learn how to use Java or Kotlin programming languages to write Android application logic, how to work with data storage, and how to integrate with web services and APIs.",
-            "What you will Learn": "",
+            "Description": "Android development involves the creation of mobile applications for the Android operating system. Learning Android development can lead to career opportunities in mobile app development, software engineering, and UX/UI design. The average entry-level salary for an Android developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
+            "What you will Learn": "In an Android development course, you will learn how to build and publish mobile applications for the Android operating system. You will learn how to design user interfaces, handle user input, and create layouts using XML and Android's UI toolkit. You will also learn how to use Java or Kotlin programming languages to write Android application logic, how to work with data storage, and how to integrate with web services and APIs.",
             "Prerequisites": ["Java"],
             "Level": "Basic",
             "Duration": ["4 Months"],
@@ -168,7 +168,7 @@
             "Certificate": "Yes"
         },
         "AI/ML": {
-            "Description": "",
+            "Description": "AI/ML (Artificial Intelligence/Machine Learning) involves the use of algorithms and statistical models to enable computer systems to perform tasks without explicit instructions. Learning AI/ML can lead to career opportunities in data science, machine learning, AI engineering, and software engineering. The average entry-level salary for an AI/ML engineer in India is around 5-8 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In an AI/ML course, you will learn how to build intelligent systems that can learn from data and make predictions or decisions based on that data. You will learn how to use machine learning algorithms, such as linear regression, decision trees, and neural networks, to analyze and classify data. You will also learn how to train and evaluate models, preprocess data, and deal with common problems in AI/ML, such as overfitting and underfitting. ",
             "Prerequisites": ["Python"],
             "Level": "Advanced",
@@ -180,7 +180,7 @@
     },
     "Frontend":{
         "React":{
-            "Description": "",
+            "Description": "React is a JavaScript library used for building user interfaces. Learning React can lead to career opportunities in front-end development, full-stack development, and UX/UI design. The average entry-level salary for a React developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a React course, you will learn how to build user interfaces using React, a popular JavaScript library for building UI components. You will learn how to create and manage components, use props and state to handle data and events, and how to manage the component lifecycle.",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
@@ -190,7 +190,7 @@
             "Certificate": "Yes"
         },
         "Bootstrap": {
-            "Description": "",
+            "Description": "Bootstrap is a popular CSS framework used for building responsive and mobile-first websites. Learning Bootstrap can lead to career opportunities in web development, front-end development, and UX/UI design. The average entry-level salary for a Bootstrap developer in India is around 2-4 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a Bootstrap course, you will learn how to build responsive and mobile-first websites using the Bootstrap framework, a popular front-end framework for building responsive, mobile-ready websites. You will learn how to use Bootstrap's grid system, components, and utilities to create responsive and accessible web pages.",
             "Prerequisites": ["HTML/CSS"],
             "Level": "Intermediate",
@@ -200,7 +200,7 @@
             "Certificate": "Yes"
         },
         "AngularJS": {
-            "Description": "",
+            "Description": "AngularJS is a JavaScript framework used for building dynamic web applications. Learning AngularJS can lead to career opportunities in web development, front-end development, and full-stack development. The average entry-level salary for an AngularJS developer in India is around 3-5 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In an AngularJS course, you will learn how to build dynamic web applications using AngularJS, a popular front-end JavaScript framework. You will learn how to use AngularJS to create and manage web components, handle data, and create templates and forms. ",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
@@ -210,7 +210,7 @@
             "Certificate": "Yes"
         },
         "VueJS": {
-            "Description": "",
+            "Description": "Vue.js is a progressive JavaScript framework used for building user interfaces. Learning Vue.js can lead to career opportunities in front-end development, full-stack development, and UX/UI design. The average entry-level salary for a Vue.js developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a Vue.js course, you will learn how to build reactive and scalable web applications using Vue.js, a progressive JavaScript framework. You will learn how to use Vue.js to create and manage web components, handle data and events, and build reactive user interfaces. ",
             "Prerequisites": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
@@ -222,7 +222,7 @@
     },
     "Backend": {
         "NodeJS": {
-            "Description": "",
+            "Description": "Node.js is a JavaScript runtime built on the V8 JavaScript engine. Learning Node.js can lead to career opportunities in back-end development, full-stack development, and server-side programming. The average entry-level salary for a Node.js developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a Node.js course, you will learn how to build scalable and high-performance applications using Node.js, a popular server-side JavaScript runtime. You will learn how to use Node.js to handle HTTP requests, create APIs and web services, work with databases, and implement security features.",
             "Prerequisites": ["JavaScript","HTML/CSS"],
             "Level": "Intermediate",
@@ -232,7 +232,7 @@
             "Certificate": "Yes"
         },
         "MongoDB": {
-            "Description": "",
+            "Description": "MongoDB is a popular NoSQL database used for storing and retrieving data in real-time applications. Learning MongoDB can lead to career opportunities in database administration, full-stack development, and back-end development. The average entry-level salary for a MongoDB developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a MongoDB course, you will learn how to work with MongoDB, a popular NoSQL database, and how to use it to store and manage data in your applications. You will learn how to use MongoDB's query language, indexing, and aggregation features to manipulate data and how to integrate MongoDB with Node.js.",
             "Prerequisites": [
                 "JavaScript",
@@ -246,7 +246,7 @@
             "Certificate": "Yes"
         },
         "MySQL": {
-            "Description": "",
+            "Description": "MySQL is a popular open-source relational database management system used for storing and managing data. Learning MySQL can lead to career opportunities in database administration, full-stack development, and back-end development. The average entry-level salary for a MySQL developer in India is around 3-5 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a MySQL course, you will learn how to work with MySQL, a popular relational database, and how to use it to store and manage data in your applications. You will learn how to use MySQL's query language, indexing, and optimization features to manipulate data and how to integrate MySQL with Node.js.",
             "Prerequisites": [
                 "Basic SQL"
@@ -258,7 +258,7 @@
             "Certificate": "Yes"
         },
         "Django": {
-            "Description": "",
+            "Description": "Django is a high-level Python web framework used for building web applications quickly and efficiently. Learning Django can lead to career opportunities in web development, full-stack development, and back-end development. The average entry-level salary for a Django developer in India is around 3-6 lakhs per annum, depending on the industry and location.",
             "What you will Learn": "In a Django course, you will learn how to build web applications using Django, a popular Python web framework. You will learn how to use Django to create and manage web components, handle data and events, and build web templates and forms.",
             "Prerequisites": [
                 "JavaScript",
@@ -274,65 +274,65 @@
     "Live Projects":{
         
         "Chat Application":{
-            "Description": "",
+            "Description": "Developing a chat application project can help individuals advance their career by improving their technical skills, collaboration, project management, problem-solving, and customer-centric approach. In addition, the experience of working on a chat application project can enhance one's resume and make them a more attractive candidate for future job opportunities in the software development industry.",
             "What you will Learn": "You will learn how to build real-time communication features using web sockets, how to store and retrieve chat messages in a database, and how to implement user authentication and authorization.",
             "Language": ["JavaScript","HTML/CSS"],
             "Level": "Intermediate",
-            "Duration": ["1 Month"],
+            "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Movie Database":{
-            "Description": "",
+            "Description": "A movie database is a digital collection of information about movies, including details such as titles, genres, release dates, cast and crew, plot summaries, and ratings. It can be used by movie enthusiasts to search and explore movies, and by professionals in the film industry for research and analysis. The database can be built using a variety of technologies, including databases, APIs, and web applications, and can provide opportunities for individuals to develop technical skills in data management, programming, and web development.",
             "What you will Learn": "You will learn how to build a database to store and manage movie data, how to search and filter movies based on various criteria, and how to implement user authentication and authorization.",
             "Language": ["HTML/CSS","JavaScript","JSON"],
             "Level": "Intermediate",
-           "Duration": ["1 Month"],
+           "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Music Player":{
-            "Description": "",
+            "Description": "A music player is a digital application that allows users to play and manage audio files on their devices. It can include features such as playlist creation, equalizer settings, album art display, and audio playback controls. Music players can be built using a variety of programming languages and frameworks, and can offer opportunities for individuals to develop technical skills in software development, user interface design, and audio processing.",
             "What you will Learn": "You will learn how to use audio and media APIs in JavaScript to play audio files, how to implement audio controls like play, pause, and seek, and how to work with audio metadata.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
-            "Duration": ["1 Month"],
+            "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Social Media":{
-            "Description": "",
+            "Description": "Social media refers to digital platforms and applications that allow users to create, share, and exchange information, ideas, and content in virtual communities and networks. Popular social media platforms include Facebook, Twitter, Instagram, and LinkedIn, and they offer various features such as messaging, news feeds, video sharing, and group creation. Building social media applications requires a combination of skills in software development, user interface design, and database management, and can provide opportunities for individuals to gain experience in these areas.",
             "What you will Learn": "You will learn how to build user profiles, create posts and comments, handle likes and shares, and implement real-time updates using web sockets.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
-            "Duration": ["1 Month"],
+            "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Ecommerce":{
-            "Description": "",
+            "Description": "E-commerce refers to the buying and selling of goods and services over the internet. It involves the use of digital platforms and technologies to facilitate transactions between buyers and sellers. E-commerce platforms can include online marketplaces, web stores, and mobile applications, and they typically offer features such as product listings, shopping carts, payment gateways, and order tracking. Building e-commerce platforms requires a combination of skills in software development, user experience design, and database management, and can provide opportunities for individuals to gain experience in these areas.",
             "What you will Learn": "You will learn how to build an online store, handle product listings and orders, implement payment processing features using a payment gateway, and manage customer information.",
             "Language": ["HTML/CSS","JavaScript","JSON"],
             "Level": "Intermediate",
-            "Duration": ["1 Month"],
+            "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Authentication System":{
-            "Description": "",
+            "Description": "An authentication system is a digital security mechanism that verifies the identity of users attempting to access a computer system, network, or application. It involves the use of credentials such as usernames, passwords, and security tokens to grant or deny access to the system. Authentication systems can be built using a variety of technologies and techniques, including encryption, hashing, and multi-factor authentication. Developing authentication systems requires expertise in software development, security protocols, and database management, and can offer opportunities for individuals to gain experience in these areas.",
             "What you will Learn": " You will learn how to build a secure authentication system, handle user registration and login, implement password reset and email verification features, and store user credentials securely.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate",
-            "Duration": ["1 Month"],
+            "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         },
         "Payment Gateway":{
-            "Description": "",
+            "Description": "A payment gateway is a digital platform that facilitates online transactions between buyers and sellers by securely processing payment information such as credit card details, bank account numbers, or digital wallet credentials. Payment gateways are typically integrated with e-commerce platforms, mobile applications, and other digital payment systems. They use encryption and tokenization techniques to protect sensitive information during the payment process. Building payment gateways requires expertise in software development, security protocols, and financial regulations, and can offer opportunities for individuals to gain experience in these areas.",
             "What you will Learn": "You will learn how to implement payment processing features using a payment gateway API, handle payment transactions securely, and integrate payment processing with other features like order management and invoicing.",
             "Language": ["HTML/CSS","JavaScript"],
             "Level": "Intermediate", 
-            "Duration": ["1 Month"],
+            "Duration": ["2 Months"],
             "Projects": "1",
             "Certificate": "Yes"
         }

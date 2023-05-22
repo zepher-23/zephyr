@@ -35,10 +35,11 @@
     margin: 16px 0 16px 24px;
 }
 .hero{
-    background-image: url('../images/bg5.jpg');
+    background-image: url('../images/bg9.jpg');
     
     background-size: cover;
     background-position: center center;
+    background-repeat: no-repeat;
     background-color: #000000 !important;
 }
 .hero-grad{
@@ -47,7 +48,7 @@
     justify-content: center;
     align-items: center;
    
-    background: linear-gradient(to right, #ffffffb8, #ffffffb8)
+    /* background: linear-gradient(to right, #ffffffb8, #ffffffb8) */
 }
 /* 
 #about{
